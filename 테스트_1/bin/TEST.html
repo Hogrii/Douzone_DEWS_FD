@@ -1,6 +1,6 @@
-<!--##4fa98eef-0c5c-47fd-ae82-a03eddc634aa##-->
+<!--##3dd81e0a-ccdd-4ed3-a5ad-b5279a63bb3c##-->
 <!--##TEST##-->
-<!--##wqGM7JhRrpArN8jqMXBAPQ==##-->
+<!--##NuAOt4FA7TE09+no3gytMA==##-->
 <!--
   DEWS UI/UX IDE - Build Result - v1.5
   # PageID: TEST
@@ -23,7 +23,7 @@
     <li>
       <label class="dews-ui-multilingual">회계일</label>
       <span>
-        <input type="text" id="dp1" name="dp1" class="dews-ui-datepicker basic" data-dews-format="yyyy-MM-dd" />
+        <input type="text" id="dp1" name="dp1" class="dews-ui-datepicker required" data-dews-format="yyyy-MM-dd" />
       </span>
     </li>
     <li>
@@ -83,14 +83,78 @@
     <li>
       <label class="dews-ui-multilingual">지방세신고지 코드</label>
       <span>
-        <input type="text" id="_CD_TAXAREA3" name="_CD_TAXAREA3" class="dews-ui-codepicker basic" data-dews-help-code="H_TX_TSM_HR_TAXAREA_INFO_S" data-dews-code-field="CD_TAXAREA" data-dews-text-field="NM_AREA" data-dews-help-title="지방세신고지" data-dews-help-custom="false" data-dews-help-size="medium" data-dews-ajax="true" />
+        <input type="text" id="_CD_TAXAREA3" name="_CD_TAXAREA3" class="dews-ui-codepicker basic" data-dews-help-code="H_TX_TSM_HR_TAXAREA_INFO_S" data-dews-code-field="CD_TAXAREA" data-dews-text-field="NM_AREA" data-dews-help-title="지방세신고지" data-dews-help-custom="false" data-dews-help-size="medium" data-dews-ajax="true" style="background-color: red;" />
+      </span>
+    </li>
+    <li>
+      <label class="dews-ui-multilingual">라벨</label>
+      <span>
+        <input id="txt2" name="txt2" type="text" class="dews-ui-textbox basic" />
       </span>
     </li>
   </ul>
 </div>
+<div id="conditionpanel2" class="dews-ui-condition-panel" data-dews-label-align="left">
+  <ul class="required-area">
+    <li>
+      <label class="dews-ui-multilingual">라벨</label>
+      <span>
+        <input id="chk2" name="chk2" type="checkbox" class="dews-ui-checkbox" />
+      </span>
+    </li>
+    <li>
+      <label class="dews-ui-multilingual">라벨</label>
+      <span>
+        <select id="rdog1" class="dews-ui-radio-group">
+          <option class="dews-ui-multilingual" value=""></option>
+        </select>
+      </span>
+    </li>
+    <li>
+      <label class="dews-ui-multilingual">라벨</label>
+      <span>
+        <input id="rdo1" name="rdo1" type="radio" class="dews-ui-radio" />
+      </span>
+    </li>
+  </ul>
+  <ul class="optional-area">
+    <li>
+      <label class="dews-ui-multilingual">라벨</label>
+      <span>
+        <input id="chk3" name="chk3" type="checkbox" class="dews-ui-checkbox" />
+      </span>
+    </li>
+  </ul>
+</div>
+<div id="containerpanel1" class="dews-ui-container-panel">
+  <div id="containerpanelitem1" class="dews-container-item" data-dews-position="left" data-dews-width="494px"></div>
+  <div id="containerpanelitem2" class="dews-container-item" data-dews-position="normal"></div>
+</div>
+<div id="containerpanel2" class="dews-ui-container-panel">
+  <div id="containerpanelitem3" class="dews-container-item" data-dews-position="normal">
+    <div id="arc1" class="dews-ui-arcodien" data-dews-arcodien-height="100" data-dews-item-height="100">
+      <ul>
+        <li id="arcitem1" class="dews-arcodien-item" data-dews-item-title="아코디언 리스트" data-dews-item-height="100"></li>
+      </ul>
+    </div>
+    <div id="arc2" class="dews-ui-arcodien" data-dews-arcodien-height="100" data-dews-item-height="100">
+      <ul>
+        <li id="arcitem2" class="dews-arcodien-item" data-dews-item-title="아코디언 리스트" data-dews-item-height="100"></li>
+        <li id="arcitem3" class="dews-arcodien-item" data-dews-item-title="아코디언 리스트" data-dews-item-height="100"></li>
+        <li id="arcitem4" class="dews-arcodien-item" data-dews-item-title="아코디언 리스트" data-dews-item-height="100"></li>
+        <li id="arcitem5" class="dews-arcodien-item" data-dews-item-title="아코디언 리스트" data-dews-item-height="100"></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="dews-button-group" style="text-align: right;">
+  <button id="btn1" class="dews-ui-button"></button>
+  <button id="btn2" class="dews-ui-button"></button>
+  <h2 id="tit1" class="dews-ui-title">타이틀</h2>
+</div>
 
 <style>
-    
+    #txt2 {background-color: aqua;}
 </style>
 
 
@@ -125,12 +189,12 @@
         }
     ]
     });
-    self.ds1 = dews.ui.dataSource('ds1', {
-      grid: true,
+    self.ds1 = dews.ui.treeDataSource('ds1', {
       schema: {
         model: {
+          children: 'DEPT_NAME',
           fields: [
-            { field: 'DEPT_CD', editable: false, dataType: 'string' }, 
+            { field: 'DEPT_CD', editable: false, type: 'string' }, 
             { field: 'DEPT_NAME', editable: false }
           ]
     
@@ -141,6 +205,8 @@
     
     
     dews.ui.mainbuttons.localize.disable(true);
+    dews.ui.mainbuttons.print.click(/*cba183f6-992b-47f4-a5a4-e0d49b9e4628*/ function () {
+    });
     dews.ui.grid(self.$grid1, {
       sortable: false,
       autoBind: false,

@@ -5,9 +5,9 @@
       <version>1.0</version>
       <create>edu13</create>
       <modify>edu13</modify>
-      <builddate>2023-08-03T16:37:03.3790214+09:00</builddate>
+      <builddate>2023-08-03T17:57:18.2633894+09:00</builddate>
       <createdate>2023-08-03T13:14:36.5435222+09:00</createdate>
-      <modifieddate>2023-08-03T16:37:03.3790214+09:00</modifieddate>
+      <modifieddate>2023-08-03T17:57:18.2633894+09:00</modifieddate>
     </pageInformation>
     <mainButtons uid="mainButtons-1385142915113">
       <mainButton uid="mainButton-1485142971049" id="information" buttonAttr="normal" type="information" />
@@ -49,7 +49,7 @@
           </textbox>
         </conditionItem>
         <conditionItem uid="conditionItem-03151a80241d49248c2a3d12ab8ac456" columnSize="1" text="회계일">
-          <datepicker uid="datepicker-1d45ec87b96142a98b862a37299390cc" id="dp1" disabled="false" readonly="false" state="basic" min_type="value" max_type="value" format="yyyy-MM-dd" predefined="false" width_type="px">
+          <datepicker uid="datepicker-1d45ec87b96142a98b862a37299390cc" id="dp1" disabled="false" readonly="false" state="required" min_type="value" max_type="value" format="yyyy-MM-dd" predefined="false" width_type="px">
             <designerComment>회계일</designerComment>
           </datepicker>
         </conditionItem>
@@ -109,7 +109,7 @@
           </multicodepicker>
         </conditionItem>
         <conditionItem uid="conditionItem-169bd2e5d6c44f42969c7e6a18f565df" columnSize="1" text="지방세신고지 코드">
-          <codepicker uid="codepicker-ff3874e10a554a2cb92383afaa052dad" id="_CD_TAXAREA3" disabled="false" readonly="false" state="basic" helpCode="H_TX_TSM_HR_TAXAREA_INFO_S" codeField="CD_TAXAREA" textField="NM_AREA" helpCustom="false" helpURLCustom="" helpTitle="지방세신고지" helpSize="medium" useKeyword="true" clearKeyword="false" ajax="true" width_type="px">
+          <codepicker uid="codepicker-ff3874e10a554a2cb92383afaa052dad" style="background-color:red;" id="_CD_TAXAREA3" disabled="false" readonly="false" state="basic" helpCode="H_TX_TSM_HR_TAXAREA_INFO_S" codeField="CD_TAXAREA" textField="NM_AREA" helpCustom="false" helpURLCustom="" helpTitle="지방세신고지" helpSize="medium" useKeyword="true" clearKeyword="false" ajax="true" width_type="px">
             <mapping>
               <param parameter="table_fg" applyType="constant" />
             </mapping>
@@ -120,6 +120,48 @@
         </conditionItem>
       </conditionGroup>
     </conditionPanel>
+    <conditionPanel uid="conditionPanel-afe9e354" id="conditionpanel2" margin="false" optional="true" optionalcollapsed="true" columnLength="3" labelAlign="left">
+      <conditionGroup uid="conditionGroup-c786a855" type="required">
+        <conditionItem uid="conditionItem-f3ebe0ea" columnSize="1" text="라벨" state="basic">
+          <checkbox uid="checkbox-1bc5d439" id="chk2" disabled="false" checked="false" />
+        </conditionItem>
+        <conditionItem uid="conditionItem-a62aab42" columnSize="1" text="라벨" state="basic">
+          <radiogroup uid="radiogroup-5ed258a6" id="rdog1" disabled="false" align="horizontal">
+            <radioitem uid="radioitem-70627bcf" disabled="false" selected="false" />
+          </radiogroup>
+        </conditionItem>
+        <conditionItem uid="conditionItem-8065aec6" columnSize="1" text="라벨" state="basic">
+          <radio uid="radio-b40636fe" id="rdo1" checked="false" disabled="false" />
+        </conditionItem>
+      </conditionGroup>
+      <conditionGroup uid="conditionGroup-92b0c200" type="optional">
+        <conditionItem uid="conditionItem-c591707b" columnSize="1" text="라벨" state="basic">
+          <checkbox uid="checkbox-4a7925ff" id="chk3" disabled="false" checked="false" />
+        </conditionItem>
+      </conditionGroup>
+    </conditionPanel>
+    <containerPanel uid="containerPanel-3588d972" id="containerpanel1" height_type="px" containerResize="false">
+      <containerItem uid="containerItem-2f1cf49f" id="containerpanelitem1" width_type="px" width="494" location="left" />
+      <containerItem uid="containerItem-d80e5015" id="containerpanelitem2" width_type="px" width="" location="normal" />
+    </containerPanel>
+    <containerPanel uid="containerPanel-1e845c42" id="containerpanel2" height_type="px" containerResize="false">
+      <containerItem uid="containerItem-9f8946ab" id="containerpanelitem3" width_type="px" location="normal">
+        <arcodienPanel uid="arcodienPanel-8bd52dcf" id="arc1" arcodien_height="100" item_height="100" arcodien_type="single" itemPadding="false">
+          <arcodienItem uid="arcodienItem-41896212" id="arcitem1" item_title="아코디언 리스트" item_height="100" item_disabled="false" item_open="false" item_hide="false" />
+        </arcodienPanel>
+        <arcodienPanel uid="arcodienPanel-baeee8e7" id="arc2" arcodien_height="100" item_height="100" arcodien_type="single" itemPadding="false">
+          <arcodienItem uid="arcodienItem-305d63af" id="arcitem2" item_title="아코디언 리스트" item_height="100" item_disabled="false" item_open="false" item_hide="false" />
+          <arcodienItem uid="arcodienItem-e6016306" id="arcitem3" item_title="아코디언 리스트" item_height="100" item_disabled="false" item_open="false" item_hide="false" />
+          <arcodienItem uid="arcodienItem-90ced0f2" id="arcitem4" item_title="아코디언 리스트" item_height="100" item_disabled="false" item_open="false" item_hide="false" />
+          <arcodienItem uid="arcodienItem-a6e96c71" id="arcitem5" item_title="아코디언 리스트" item_height="100" item_disabled="false" item_open="false" item_hide="false" />
+        </arcodienPanel>
+      </containerItem>
+    </containerPanel>
+    <buttonGroup uid="buttonGroup-9f9ac3e5" align="right" bottom="false">
+      <button uid="button-08261a5b" id="btn1" buttonType="normal" useemphasize="false" emphasize="" disabled="false" />
+      <button uid="button-3cde128c" id="btn2" buttonType="normal" useemphasize="false" emphasize="" disabled="false" />
+      <title uid="title-e1dc50fe" id="tit1" title="타이틀" type="h2" />
+    </buttonGroup>
   </canvas>
   <dataSources>
     <datasource uid="datasource-d8f4eb2e4fea4699ba22172f328ae362" id="localDataSource1" isTreeGrid="false" grid="false" aggregate="false" group="false" userGroup="false" type="localdata" module="" service="" urlpattern="" params_type="none" params="" preview_type="none" preview="" localdata="3f83e365-776b-4b4a-9dbb-7166816da266" url="" useGroup="false" isMultiPipe="false" pipeparam="" pipecolumn="" paging="false" pagingCount="500" error="" DSType="None" isPost="false">
