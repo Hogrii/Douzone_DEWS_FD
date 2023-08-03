@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page title="타이틀" name="TEST" type="page">
+  <canvas uid="canvas-1485142915100" type="page" title="타이틀" component="" function="">
+    <pageInformation>
+      <version>1.0</version>
+      <create>edu13</create>
+      <modify>edu13</modify>
+      <builddate>2023-08-03T15:28:35.5511977+09:00</builddate>
+      <createdate>2023-08-03T13:14:36.5435222+09:00</createdate>
+      <modifieddate>2023-08-03T15:28:35.5511977+09:00</modifieddate>
+    </pageInformation>
+    <mainButtons uid="mainButtons-1385142915113">
+      <mainButton uid="mainButton-1485142971049" id="information" buttonAttr="normal" type="information" />
+      <mainButton uid="mainButton-1485142971050" id="localize" buttonAttr="disabled" type="localize" />
+      <mainButton uid="mainButton-1485142971051" id="approval" buttonAttr="normal" type="approval" />
+      <mainButton uid="mainButton-1485142971058" id="etn-approval" buttonAttr="normal" type="etn-approval" />
+      <mainButton uid="mainButton-1485142971052" id="add" buttonAttr="normal" type="add" />
+      <mainButton uid="mainButton-1485142971053" id="search" buttonAttr="normal" type="search" />
+      <mainButton uid="mainButton-1485142971054" id="delete" buttonAttr="normal" type="delete" />
+      <mainButton uid="mainButton-1485142971055" id="print" buttonAttr="normal" type="print" />
+      <mainButton uid="mainButton-1485142971056" id="save" buttonAttr="normal" type="save" />
+      <mainButton uid="mainButton-1485142971057" id="configure" buttonAttr="normal" type="configure" />
+    </mainButtons>
+    <grid uid="grid-c4d1bb70" id="grid1" dataSource="" height_type="px" editable="false" movable="false" rowNo="true" selectable="false" checkable="false" pasteAddRowEvent="false" sortable="false" shiftCheck="false" autoBind="false" requiredCheck="false" stateColumn="false" noData="false" noDataMessage="데이터가 없습니다" fillWidth="true" resizable="true" contextType="Boolean" context="false" contextex="true" skipEdit="false" copyMode="cell" multiFooterCnt="0" multiHeaderSummaryCnt="0" useGridUserGroup="false">
+      <columns />
+      <filter filterType="Boolean" filter="true" iconVisible="false" />
+      <contextObject excelDownload="true" fixed="true" search="true" excelDownloadExpandAll="true" excelFileNameSuffixDate="false" excelFileNameSuffixDateFormat="" />
+      <detailGrid addedRowDataSourceRead="true" />
+      <gridGroupColumns />
+      <fixed colCount="0" rightColCount="0" />
+      <styles heightTyp="string">
+        <rowNo />
+        <cellBorder />
+        <font bold="false" />
+        <padding />
+        <heightObject />
+      </styles>
+      <note>
+        <keys />
+      </note>
+    </grid>
+    <conditionPanel uid="conditionPanel-268b1292" id="conditionpanel1" margin="false" optional="false" optionalcollapsed="true" columnLength="3" labelAlign="left">
+      <conditionGroup uid="conditionGroup-436f416c" type="required">
+        <conditionItem uid="conditionItem-b36ca75400874dab8d4d14b8a3e06833" columnSize="1" text="회계단위">
+          <textbox uid="textBox-638711ab917b43fc9bf287f3a7913763" id="txt1" disabled="false" readonly="false" predefined="false" useSecureMask="false" multiline="false" width_type="px" height_type="px" rows="0" maxlength="0" password="false">
+            <designerComment>회계단위</designerComment>
+          </textbox>
+        </conditionItem>
+        <conditionItem uid="conditionItem-03151a80241d49248c2a3d12ab8ac456" columnSize="1" text="회계일">
+          <datepicker uid="datepicker-1d45ec87b96142a98b862a37299390cc" id="dp1" disabled="false" readonly="false" state="basic" min_type="value" max_type="value" format="yyyy-MM-dd" predefined="false" width_type="px">
+            <designerComment>회계일</designerComment>
+          </datepicker>
+        </conditionItem>
+        <conditionItem uid="conditionItem-93c80716300e4be388f9d2d555e019b6" columnSize="1" text="조회구분">
+          <dropdownlist uid="dropdownlist-deff47fb89e445b7a2f61074f759d100" id="ddl1" autoBind="true" dataSource="localDataSource1" valueField="SYSDEF_CD" textField="SYSDEF_NM" pipeparam="" useDefault="false" defaultValue="" defaultText="" width_type="px" disabled="false" readonly="false" autoOpen="false" useNumkey="false" showTooltip="true" showValueTooltip="true" state="basic">
+            <designerComment>조회구분</designerComment>
+          </dropdownlist>
+        </conditionItem>
+        <conditionItem uid="conditionItem-592641d7" columnSize="1" text="라벨" state="basic">
+          <checkbox uid="checkbox-ff92e53d" id="chk1" disabled="false" checked="false" />
+        </conditionItem>
+      </conditionGroup>
+    </conditionPanel>
+  </canvas>
+  <dataSources>
+    <datasource uid="datasource-d8f4eb2e4fea4699ba22172f328ae362" id="localDataSource1" isTreeGrid="false" grid="false" aggregate="false" group="false" userGroup="false" type="localdata" module="" service="" urlpattern="" params_type="none" params="" preview_type="none" preview="" localdata="3f83e365-776b-4b4a-9dbb-7166816da266" url="" useGroup="false" isMultiPipe="false" pipeparam="" pipecolumn="" paging="false" pagingCount="500" error="" DSType="None" isPost="false">
+      <mapping />
+      <columns>
+        <column field="SYSDEF_CD" unionfield="" dataType="string" editable="false" useType="true" isID="false" isChildren="false" description="코드" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="SYSDEF_NM" unionfield="" dataType="string" editable="false" useType="true" isID="false" isChildren="false" description="이름" useAggregate="false" aggregate="" useGroup="false" />
+      </columns>
+      <widgetSampleDatas />
+    </datasource>
+  </dataSources>
+  <pageMarkDown><![CDATA[]]></pageMarkDown>
+  <pageCssStyle><![CDATA[]]></pageCssStyle>
+  <stylesheets />
+  <javascripts />
+  <settings />
+  <datas>
+    <data id="3f83e365-776b-4b4a-9dbb-7166816da266" type="local"><![CDATA[[
+    {
+        "SYSDEF_CD": "1",
+        "SYSDEF_NM": "가족사항"
+    },
+    {
+        "SYSDEF_CD": "2",
+        "SYSDEF_NM": "시스템코드"
+    }
+]]]></data>
+  </datas>
+</page>

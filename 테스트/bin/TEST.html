@@ -1,0 +1,103 @@
+<!--##b89ed431-5f0c-4c88-9b01-7c789c42a296##-->
+<!--##TEST##-->
+<!--##4Irp5hsq/VpGoJ0h2c31VQ==##-->
+<!--
+  DEWS UI/UX IDE - Build Result - v1.5
+  # PageID: TEST
+  # PageTitle: 타이틀
+  # Server: https://prd2.comet.duzon.net/
+-->
+<!--
+
+-->
+
+<div id="grid1" class="dews-ui-grid"></div>
+<div id="conditionpanel1" class="dews-ui-condition-panel" data-dews-label-align="left">
+  <ul class="required-area">
+    <li>
+      <label class="dews-ui-multilingual">회계단위</label>
+      <span>
+        <input id="txt1" name="txt1" type="text" class="dews-ui-textbox" />
+      </span>
+    </li>
+    <li>
+      <label class="dews-ui-multilingual">회계일</label>
+      <span>
+        <input type="text" id="dp1" name="dp1" class="dews-ui-datepicker basic" data-dews-format="yyyy-MM-dd" />
+      </span>
+    </li>
+    <li>
+      <label class="dews-ui-multilingual">조회구분</label>
+      <span>
+        <select id="ddl1" name="ddl1" class="dews-ui-dropdownlist basic" data-dews-value-field="SYSDEF_CD" data-dews-text-field="SYSDEF_NM" data-dews-show-tooltip="true" data-dews-show-value-tooltip="true" data-dews-use-numkey="false"></select>
+      </span>
+    </li>
+    <li>
+      <label class="dews-ui-multilingual">라벨</label>
+      <span>
+        <input id="chk1" name="chk1" type="checkbox" class="dews-ui-checkbox" />
+      </span>
+    </li>
+  </ul>
+</div>
+
+<style>
+    
+</style>
+
+
+
+<script>
+  dews.ready(function () {
+    var self = this;
+    self.version = self.version || {};
+    self.version.view='1.0';
+
+
+    
+    
+    self.localDataSource1 = dews.ui.dataSource('localDataSource1', {
+      schema: {
+        model: {
+          fields: [
+            { field: 'SYSDEF_CD', editable: false, type: 'string' }, 
+            { field: 'SYSDEF_NM', editable: false, type: 'string' }
+          ]
+    
+        }
+      },
+      data: [
+        {
+            "SYSDEF_CD": "1",
+            "SYSDEF_NM": "가족사항"
+        },
+        {
+            "SYSDEF_CD": "2",
+            "SYSDEF_NM": "시스템코드"
+        }
+    ]
+    });
+    
+    
+    dews.ui.mainbuttons.localize.disable(true);
+    dews.ui.grid(self.$grid1, {
+      sortable: false,
+      autoBind: false,
+      checkable: false,
+      copyMode: 'cell',
+      fixed: {
+        colCount: 0,
+        rightColCount: 0
+      }
+    });
+    self.ddl1.setDataSource(self.localDataSource1);
+    
+    
+    
+    
+    
+
+  
+  });
+
+</script>
