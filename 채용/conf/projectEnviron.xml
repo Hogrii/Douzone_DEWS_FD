@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Environment>
+  <server>
+    <url>https://prddemo.comet.duzon.net</url>
+  </server>
+  <serverdbsearch>
+    <url>https://prddemo.comet.duzon.net</url>
+  </serverdbsearch>
+  <module>
+    <name>HR</name>
+    <desc>인사관리</desc>
+  </module>
+  <variables />
+  <BaseInfo>
+    <UID>8853a980-d022-42a9-9deb-11e8264fa4e8</UID>
+  </BaseInfo>
+</Environment>

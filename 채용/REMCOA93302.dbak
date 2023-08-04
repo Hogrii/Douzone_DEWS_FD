@@ -1,0 +1,1153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page title="채용" name="REMCOA93302" type="page">
+  <canvas uid="canvas-1485142915100" type="page" widgetContentType="widgetContent" title="채용" component="" function="">
+    <pageInformation>
+      <version>1.0</version>
+      <create>edu13</create>
+      <modify>edu13</modify>
+      <builddate>2023-08-04T10:52:09.6747079+09:00</builddate>
+      <createdate>2023-08-04T10:48:58.8310082+09:00</createdate>
+      <modifieddate>2023-08-04T10:52:09.6747079+09:00</modifieddate>
+    </pageInformation>
+    <mainButtons uid="mainButtons-1385142915113">
+      <mainButton uid="mainButton-1485142971049" id="information" buttonAttr="normal" type="information" />
+      <mainButton uid="mainButton-1485142971050" id="localize" buttonAttr="disabled" type="localize" />
+      <mainButton uid="mainButton-1485142971051" id="approval" buttonAttr="normal" type="approval" />
+      <mainButton uid="mainButton-1485142971058" id="etn-approval" buttonAttr="normal" type="etn-approval" />
+      <mainButton uid="mainButton-1485142971052" id="add" buttonAttr="normal" type="add" click="604a135a-3ee1-499c-b461-e1ea6cf0ea2c" />
+      <mainButton uid="mainButton-1485142971053" id="search" buttonAttr="normal" type="search" click="b5ce1a8d-65f8-4635-b7f4-3f388e8bdea7" />
+      <mainButton uid="mainButton-1485142971054" id="delete" buttonAttr="normal" type="delete" click="58da47d1-3711-4d09-929e-461458f2c44a" />
+      <mainButton uid="mainButton-1485142971055" id="print" buttonAttr="normal" type="print" />
+      <mainButton uid="mainButton-1485142971056" id="save" buttonAttr="normal" type="save" click="f57f56e9-b3c8-4d86-9219-28794d930f4a" />
+      <mainButton uid="mainButton-1485142971057" id="configure" buttonAttr="normal" type="configure" />
+    </mainButtons>
+    <conditionPanel uid="conditionPanel-1559630969305" id="condtionPanel" margin="false" optional="false" optionalcollapsed="true" columnLength="3" labelAlign="right">
+      <conditionGroup uid="conditionGroup-1559630969431" type="required">
+        <conditionItem uid="conditionItem-fd7e818c99464598b5c7809319c26a31" columnSize="1" text="신청일자">
+          <periodpicker uid="periodpicker-cc08c4a8b8e748a4ad69138a6e8667d0" id="pp1" disabled="false" readonly="false" state="basic" startDate_type="value" endDate_type="value" predefined="false" buttons="true" width_type="px">
+            <designerComment>신청일자</designerComment>
+          </periodpicker>
+        </conditionItem>
+        <conditionItem uid="conditionItem-a5641a7d409e4d7ab9ca5bd7f0b72660" columnSize="1" text="사업장">
+          <multicodepicker uid="multicodepicker-0218da1781a6478ea3305f4f1f204d71" id="mcdp1" disabled="false" readonly="false" ajax="false" helpCode="H_MA_BIZAREA_MST_S" codeField="BIZAREA_CD" textField="BIZAREA_NM" virtualScroll="false" helpCustom="false" helpParams_type="mapping" helpSize="medium" width_type="px">
+            <designerComment>사업장</designerComment>
+            <mapping />
+          </multicodepicker>
+        </conditionItem>
+        <conditionItem uid="conditionItem-31cc635732c54f6087e35e40c86513ed" columnSize="1" text="부서">
+          <multicodepicker uid="multicodepicker-0868a40717614867b9f202db2a8feea7" id="mcdp2" disabled="false" readonly="false" ajax="false" helpCode="H_MA_DEPT_MST_S" codeField="DEPT_CD" textField="DEPT_NM" virtualScroll="false" helpCustom="false" helpParams_type="mapping" helpSize="big" width_type="px">
+            <designerComment>부서</designerComment>
+            <mapping />
+          </multicodepicker>
+        </conditionItem>
+        <conditionItem uid="conditionItem-30fc770f33a1486889fc8c052e215ca0" columnSize="1" text="결재상태">
+          <dropdownlist uid="dropdownlist-cabe8d03476e41acb15849466b403e4c" id="ddl1" autoBind="true" dataSource="pipeDataSource1" valueField="SYSDEF_CD" textField="SYSDEF_NM" pipeparam="P01300" useDefault="false" defaultValue="" defaultText="" width_type="px" disabled="false" readonly="false" autoOpen="false" useNumkey="false" showTooltip="true" showValueTooltip="true" state="basic">
+            <designerComment>결재상태</designerComment>
+          </dropdownlist>
+        </conditionItem>
+        <conditionItem uid="conditionItem-961dbbf7c49d4e05835194be1df1326f" columnSize="1" text="신청구분">
+          <dropdownlist uid="dropdownlist-95c727e02f104fa78ee4d566622a7cb2" id="ddl2" autoBind="true" dataSource="pipeDataSource2" valueField="SYSDEF_CD" textField="SYSDEF_NM" pipeparam="P00155" useDefault="false" defaultValue="" defaultText="" width_type="px" disabled="false" readonly="false" autoOpen="false" useNumkey="false" showTooltip="true" showValueTooltip="true" state="basic">
+            <designerComment>신청구분</designerComment>
+          </dropdownlist>
+        </conditionItem>
+        <conditionItem uid="conditionItem-ced39aa88afc4d538a6a5d6c67f4904b" columnSize="1" text="검색어">
+          <textbox uid="textBox-22e1793a64774657849dc103057f4c30" id="txt1" disabled="false" readonly="false" predefined="false" useSecureMask="false" multiline="false" width_type="px" height_type="px" rows="0" maxlength="0" password="false">
+            <designerComment>검색어</designerComment>
+          </textbox>
+        </conditionItem>
+      </conditionGroup>
+    </conditionPanel>
+    <containerPanel uid="containerPanel-1559630970898" height_type="px" fitBottom="true" containerResize="false">
+      <containerItem uid="containerItem-1559630971376" width_type="px" width="300" location="left">
+        <grid uid="grid-1559631017746" id="gridMaster1" dataSource="dataSourceUN_gridMaster1_M" height_type="px" editable="true" movable="false" rowNo="true" selectable="true" checkable="false" pasteAddRowEvent="false" sortable="false" shiftCheck="false" autoBind="false" requiredCheck="false" stateColumn="false" noData="false" fillWidth="true" resizable="true" contextType="Boolean" context="false" contextex="true" skipEdit="false" copyMode="cell" multiFooterCnt="0" multiHeaderSummaryCnt="0" useGridUserGroup="false">
+          <columns>
+            <column field="_uid" title="_uid" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+              <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+                <referenceFieldArray />
+              </mergeObject>
+              <headerCheck used="false" location="right" />
+              <footer predefined="false" currency_type="value" currency="" align="center">
+                <group predefined="false" />
+              </footer>
+              <footerCollection />
+              <headerSummary predefined="false" currency_type="value" currency="" align="center" />
+              <headerSummaryCollection />
+              <formats>
+                <DesignerControl />
+              </formats>
+              <editor>
+                <DesignerControl />
+              </editor>
+              <customExport check="" />
+            </column>
+            <column field="MENU_CD" title="MENU_CD" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+              <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+                <referenceFieldArray />
+              </mergeObject>
+              <headerCheck used="false" location="right" />
+              <footer predefined="false" currency_type="value" currency="" align="center">
+                <group predefined="false" />
+              </footer>
+              <footerCollection />
+              <headerSummary predefined="false" currency_type="value" currency="" align="center" />
+              <headerSummaryCollection />
+              <formats>
+                <DesignerControl />
+              </formats>
+              <editor>
+                <DesignerControl />
+              </editor>
+              <customExport check="" />
+            </column>
+            <column field="GRP_CD" title="GRP_CD" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+              <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+                <referenceFieldArray />
+              </mergeObject>
+              <headerCheck used="false" location="right" />
+              <footer predefined="false" currency_type="value" currency="" align="center">
+                <group predefined="false" />
+              </footer>
+              <footerCollection />
+              <headerSummary predefined="false" currency_type="value" currency="" align="center" />
+              <headerSummaryCollection />
+              <formats>
+                <DesignerControl />
+              </formats>
+              <editor>
+                <DesignerControl />
+              </editor>
+              <customExport check="" />
+            </column>
+            <column field="VER_CD" title="VER_CD" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+              <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+                <referenceFieldArray />
+              </mergeObject>
+              <headerCheck used="false" location="right" />
+              <footer predefined="false" currency_type="value" currency="" align="center">
+                <group predefined="false" />
+              </footer>
+              <footerCollection />
+              <headerSummary predefined="false" currency_type="value" currency="" align="center" />
+              <headerSummaryCollection />
+              <formats>
+                <DesignerControl />
+              </formats>
+              <editor>
+                <DesignerControl />
+              </editor>
+              <customExport check="" />
+            </column>
+            <column field="COMPANY_CD" title="COMPANY_CD" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+              <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+                <referenceFieldArray />
+              </mergeObject>
+              <headerCheck used="false" location="right" />
+              <footer predefined="false" currency_type="value" currency="" align="center">
+                <group predefined="false" />
+              </footer>
+              <footerCollection />
+              <headerSummary predefined="false" currency_type="value" currency="" align="center" />
+              <headerSummaryCollection />
+              <formats>
+                <DesignerControl />
+              </formats>
+              <editor>
+                <DesignerControl />
+              </editor>
+              <customExport check="" />
+            </column>
+            <column field="USRDATA_SQ" title="USRDATA_SQ" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+              <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+                <referenceFieldArray />
+              </mergeObject>
+              <headerCheck used="false" location="right" />
+              <footer predefined="false" currency_type="value" currency="" align="center">
+                <group predefined="false" />
+              </footer>
+              <footerCollection />
+              <headerSummary predefined="false" currency_type="value" currency="" align="center" />
+              <headerSummaryCollection />
+              <formats>
+                <DesignerControl />
+              </formats>
+              <editor>
+                <DesignerControl />
+              </editor>
+              <customExport check="" />
+            </column>
+            <column field="RFR_USRDATA_SQ" title="RFR_USRDATA_SQ" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+              <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+                <referenceFieldArray />
+              </mergeObject>
+              <headerCheck used="false" location="right" />
+              <footer predefined="false" currency_type="value" currency="" align="center">
+                <group predefined="false" />
+              </footer>
+              <footerCollection />
+              <headerSummary predefined="false" currency_type="value" currency="" align="center" />
+              <headerSummaryCollection />
+              <formats>
+                <DesignerControl />
+              </formats>
+              <editor>
+                <DesignerControl />
+              </editor>
+              <customExport check="" />
+            </column>
+            <column field="USRCD1_CD" title="결재상태" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+              <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+                <referenceFieldArray />
+              </mergeObject>
+              <headerCheck used="false" location="right" />
+              <footer predefined="false" currency_type="value" currency="" align="center">
+                <group predefined="false" />
+              </footer>
+              <footerCollection />
+              <headerSummary predefined="false" currency_type="value" currency="" align="center" />
+              <headerSummaryCollection />
+              <formats>
+                <DesignerControl />
+              </formats>
+              <editor>
+                <dropdownlist dataSource_type="value" dataSource="pipeDataSource1" dataValueField="SYSDEF_CD" dataTextField="SYSDEF_NM" autoOpen="false" editable_type="value" dataPipe="P01300" useDefault="false" defaultValue="" defaultText="">
+                  <dataSelectable />
+                </dropdownlist>
+              </editor>
+              <customExport check="" />
+              <TempCode>GWAPRVLST_CD</TempCode>
+            </column>
+            <column field="USRTXT1_TXT" title="제목" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+              <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+                <referenceFieldArray />
+              </mergeObject>
+              <headerCheck used="false" location="right" />
+              <footer predefined="false" currency_type="value" currency="" align="center">
+                <group predefined="false" />
+              </footer>
+              <footerCollection />
+              <headerSummary predefined="false" currency_type="value" currency="" align="center" />
+              <headerSummaryCollection />
+              <formats>
+                <DesignerControl />
+              </formats>
+              <editor>
+                <DesignerControl />
+              </editor>
+              <customExport check="" />
+              <TempCode>HIRE_TITL_DC</TempCode>
+            </column>
+            <column field="USRCD2_CD" title="요청자" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+              <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+                <referenceFieldArray />
+              </mergeObject>
+              <headerCheck used="false" location="right" />
+              <footer predefined="false" currency_type="value" currency="" align="center">
+                <group predefined="false" />
+              </footer>
+              <footerCollection />
+              <headerSummary predefined="false" currency_type="value" currency="" align="center" />
+              <headerSummaryCollection />
+              <formats>
+                <DesignerControl />
+              </formats>
+              <editor>
+                <codepicker helpCode="H_HR_EMP_MST_S14" codeField="EMP_NO" textField="KOR_NM" helpCustom="false" helpSize="big" helpParams_type="mapping" useAjax="true" validation="true" editable_type="value">
+                  <mapping>
+                    <param parameter="grp_cd" applyType="constant" dataType="string" value="1" />
+                  </mapping>
+                </codepicker>
+              </editor>
+              <customExport check="" />
+              <TempCode>WRTR_EMP_NO</TempCode>
+            </column>
+          </columns>
+          <filter filterType="Boolean" filter="true" iconVisible="false" />
+          <contextObject excelDownload="true" fixed="true" search="true" excelDownloadExpandAll="true" excelFileNameSuffixDate="false" excelFileNameSuffixDateFormat="">
+            <gridContextItems />
+          </contextObject>
+          <detailGrid addedRowDataSourceRead="true" />
+          <gridGroupColumns />
+          <fixed colCount="0" rightColCount="0" />
+          <styles heightTyp="string">
+            <rowNo />
+            <cellBorder />
+            <font bold="false" />
+            <padding />
+            <heightObject />
+          </styles>
+          <note>
+            <keys />
+          </note>
+        </grid>
+      </containerItem>
+      <containerItem uid="containerItem-1559630994269" width_type="px" width="" location="normal">
+        <formPanel uid="formPanel-1564641274805" columnLength="2" labelAlign="right">
+          <formGroup uid="formGroup-1564641275065">
+            <formItem uid="formItem-58a8a38373674fb4ae2417dc93886f1d" columnSize="0" text="요청자">
+              <codepicker uid="codepicker-b5ff94b8e0654c74b323e9d29c86392c" id="cdp1" disabled="false" readonly="false" helpCode="H_HR_EMP_MST_S14" codeField="EMP_NO" textField="KOR_NM" helpCustom="false" helpParams_type="mapping" helpSize="big" useKeyword="false" clearKeyword="false" ajax="false" width_type="px">
+                <designerComment>요청자</designerComment>
+                <mapping>
+                  <param parameter="grp_cd" applyType="constant" dataType="string" value="1" />
+                </mapping>
+              </codepicker>
+            </formItem>
+            <formItem uid="formItem-8bc7f6af52da421bab7abb794f697103" columnSize="0" text="요청일">
+              <datepicker uid="datepicker-27014e0c61cf4c7882b9d4efcd6c4c4c" id="dp1" disabled="false" readonly="false" state="basic" min_type="value" max_type="value" predefined="false" width_type="px">
+                <designerComment>요청일</designerComment>
+              </datepicker>
+            </formItem>
+            <formItem uid="formItem-c67ad90bfa964302999bcade370005a4" columnSize="0" text="요청부서">
+              <textbox uid="textBox-0b6827b25ae14d0587193bbfa1845f18" id="txt2" disabled="false" readonly="false" predefined="false" useSecureMask="false" multiline="false" width_type="px" height_type="px" rows="0" maxlength="0" password="false">
+                <designerComment>요청부서</designerComment>
+              </textbox>
+            </formItem>
+            <formItem uid="formItem-da4581f3eab346ec9505122d4225d1ee" columnSize="0" text="직위">
+              <textbox uid="textBox-5d97a43aad664863845961b99ab4c417" id="txt3" disabled="false" readonly="false" predefined="false" useSecureMask="false" multiline="false" width_type="px" height_type="px" rows="0" maxlength="0" password="false">
+                <designerComment>직위</designerComment>
+              </textbox>
+            </formItem>
+            <formItem uid="formItem-ae4d91c5f192461392b78fc90be26ed8" columnSize="0" text="결재상태">
+              <dropdownlist uid="dropdownlist-f5e11746fbba4ab6a65d916b7b8a86a9" id="ddl3" autoBind="true" dataSource="pipeDataSource1" valueField="SYSDEF_CD" textField="SYSDEF_NM" pipeparam="P01300" useDefault="false" defaultValue="" defaultText="" width_type="px" disabled="false" readonly="false" autoOpen="false" useNumkey="false" showTooltip="true" showValueTooltip="true" state="basic">
+                <designerComment>결재상태</designerComment>
+              </dropdownlist>
+            </formItem>
+            <formItem uid="formItem-d83c10faf1b842f5b67d1db1e34baf78" columnSize="0" text="신청구분">
+              <dropdownlist uid="dropdownlist-3f391cc69d894e8c9028fe010c2d1383" id="ddl4" autoBind="true" dataSource="pipeDataSource2" valueField="SYSDEF_CD" textField="SYSDEF_NM" pipeparam="P00155" useDefault="false" defaultValue="" defaultText="" width_type="px" disabled="false" readonly="false" autoOpen="false" useNumkey="false" showTooltip="true" showValueTooltip="true" state="basic">
+                <designerComment>신청구분</designerComment>
+              </dropdownlist>
+            </formItem>
+            <formItem uid="formItem-d001db8bc3a747c9bef61041fd4dc830" columnSize="2" text="제목">
+              <textbox uid="textBox-800d673491f64520aab59909d8753707" id="txt4" disabled="false" readonly="false" predefined="false" useSecureMask="false" multiline="false" width_type="px" height_type="px" rows="0" maxlength="0" password="false">
+                <designerComment>제목</designerComment>
+              </textbox>
+            </formItem>
+            <formItem uid="formItem-33742c8f7d9448b28c46c57867b86b40" columnSize="2" text="변경(취소)사유">
+              <textbox uid="textBox-d5266a407cae486e888c3f7ad038663f" id="txt5" disabled="false" readonly="false" predefined="false" useSecureMask="false" multiline="true" width_type="px" width="" height_type="px" height="97" rows="0" maxlength="0" password="false">
+                <designerComment>변경(취소)사유</designerComment>
+              </textbox>
+            </formItem>
+          </formGroup>
+        </formPanel>
+        <containerPanel uid="containerPanel-1564641296061" height_type="px" fitBottom="true" containerResize="false">
+          <containerItem uid="containerItem-1564641296476" width_type="px" location="normal">
+            <containerPanel uid="containerpanel-5f0180364c98431cbf676e4834c63394" height_type="px" fitBottom="true" containerResize="false">
+              <containerItem uid="containeritem-378742bd74f94495b202196e0182fbb8" width_type="px" location="normal">
+                <buttonGroup uid="buttongroup-a4a9220050d34ff4b0d18ce822f2573c" bottom="false">
+                  <button uid="button-2d3a4ee808984dba820857f84787e1ca" id="gridDetail1_addbtn" text="추가" buttonType="normal" useemphasize="false" emphasize="" disabled="false" click="2f80a735-5783-45ec-adec-6ce07bada9df" />
+                  <button uid="button-3d0f94bb970145478166a4aec72c3586" id="gridDetail1_delbtn" text="삭제" buttonType="normal" useemphasize="false" emphasize="" disabled="false" click="26422c31-6c89-45b9-a983-ca00a83372f9" />
+                  <title uid="title-a175d8f7" id="tit1" title="세부내용" type="h2" />
+                </buttonGroup>
+                <grid uid="grid-1564641303421" id="gridDetail1" dataSource="dataSourceUN_gridDetail1_M" height_type="px" editable="true" movable="false" rowNo="true" selectable="true" checkable="false" pasteAddRowEvent="false" sortable="false" shiftCheck="false" autoBind="false" requiredCheck="false" stateColumn="false" masterGrid="gridMaster1" noData="false" fillWidth="true" resizable="true" contextType="Boolean" context="false" contextex="true" skipEdit="false" copyMode="cell" multiFooterCnt="0" multiHeaderSummaryCnt="0" useGridUserGroup="false">
+                  <columns>
+                    <column field="MENU_CD" title="MENU_CD" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                      <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+                        <referenceFieldArray />
+                      </mergeObject>
+                      <headerCheck used="false" location="right" />
+                      <footer predefined="false" currency_type="value" currency="" align="center">
+                        <group predefined="false" />
+                      </footer>
+                      <footerCollection />
+                      <headerSummary predefined="false" currency_type="value" currency="" align="center" />
+                      <headerSummaryCollection />
+                      <formats>
+                        <DesignerControl />
+                      </formats>
+                      <editor>
+                        <DesignerControl />
+                      </editor>
+                      <customExport check="" />
+                    </column>
+                    <column field="GRP_CD" title="GRP_CD" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                      <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+                        <referenceFieldArray />
+                      </mergeObject>
+                      <headerCheck used="false" location="right" />
+                      <footer predefined="false" currency_type="value" currency="" align="center">
+                        <group predefined="false" />
+                      </footer>
+                      <footerCollection />
+                      <headerSummary predefined="false" currency_type="value" currency="" align="center" />
+                      <headerSummaryCollection />
+                      <formats>
+                        <DesignerControl />
+                      </formats>
+                      <editor>
+                        <DesignerControl />
+                      </editor>
+                      <customExport check="" />
+                    </column>
+                    <column field="VER_CD" title="VER_CD" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                      <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+                        <referenceFieldArray />
+                      </mergeObject>
+                      <headerCheck used="false" location="right" />
+                      <footer predefined="false" currency_type="value" currency="" align="center">
+                        <group predefined="false" />
+                      </footer>
+                      <footerCollection />
+                      <headerSummary predefined="false" currency_type="value" currency="" align="center" />
+                      <headerSummaryCollection />
+                      <formats>
+                        <DesignerControl />
+                      </formats>
+                      <editor>
+                        <DesignerControl />
+                      </editor>
+                      <customExport check="" />
+                    </column>
+                    <column field="COMPANY_CD" title="COMPANY_CD" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                      <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+                        <referenceFieldArray />
+                      </mergeObject>
+                      <headerCheck used="false" location="right" />
+                      <footer predefined="false" currency_type="value" currency="" align="center">
+                        <group predefined="false" />
+                      </footer>
+                      <footerCollection />
+                      <headerSummary predefined="false" currency_type="value" currency="" align="center" />
+                      <headerSummaryCollection />
+                      <formats>
+                        <DesignerControl />
+                      </formats>
+                      <editor>
+                        <DesignerControl />
+                      </editor>
+                      <customExport check="" />
+                    </column>
+                    <column field="USRDATA_SQ" title="USRDATA_SQ" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                      <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+                        <referenceFieldArray />
+                      </mergeObject>
+                      <headerCheck used="false" location="right" />
+                      <footer predefined="false" currency_type="value" currency="" align="center">
+                        <group predefined="false" />
+                      </footer>
+                      <footerCollection />
+                      <headerSummary predefined="false" currency_type="value" currency="" align="center" />
+                      <headerSummaryCollection />
+                      <formats>
+                        <DesignerControl />
+                      </formats>
+                      <editor>
+                        <DesignerControl />
+                      </editor>
+                      <customExport check="" />
+                    </column>
+                    <column field="RFR_USRDATA_SQ" title="RFR_USRDATA_SQ" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                      <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+                        <referenceFieldArray />
+                      </mergeObject>
+                      <headerCheck used="false" location="right" />
+                      <footer predefined="false" currency_type="value" currency="" align="center">
+                        <group predefined="false" />
+                      </footer>
+                      <footerCollection />
+                      <headerSummary predefined="false" currency_type="value" currency="" align="center" />
+                      <headerSummaryCollection />
+                      <formats>
+                        <DesignerControl />
+                      </formats>
+                      <editor>
+                        <DesignerControl />
+                      </editor>
+                      <customExport check="" />
+                    </column>
+                    <column field="USRFG1_FG" title="요청이유" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                      <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+                        <referenceFieldArray />
+                      </mergeObject>
+                      <headerCheck used="false" location="right" />
+                      <footer predefined="false" currency_type="value" currency="" align="center">
+                        <group predefined="false" />
+                      </footer>
+                      <footerCollection />
+                      <headerSummary predefined="false" currency_type="value" currency="" align="center" />
+                      <headerSummaryCollection />
+                      <formats>
+                        <DesignerControl />
+                      </formats>
+                      <editor>
+                        <dropdownlist dataSource_type="value" dataSource="pipeDataSource2" dataValueField="SYSDEF_CD" dataTextField="SYSDEF_NM" autoOpen="false" editable_type="value" dataPipe="P01880" useDefault="false" defaultValue="" defaultText="">
+                          <dataSelectable />
+                        </dropdownlist>
+                      </editor>
+                      <customExport check="" />
+                      <TempCode>HIRE_REQN_FG</TempCode>
+                    </column>
+                    <column field="USRCD1_CD" title="채용형태" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                      <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+                        <referenceFieldArray />
+                      </mergeObject>
+                      <headerCheck used="false" location="right" />
+                      <footer predefined="false" currency_type="value" currency="" align="center">
+                        <group predefined="false" />
+                      </footer>
+                      <footerCollection />
+                      <headerSummary predefined="false" currency_type="value" currency="" align="center" />
+                      <headerSummaryCollection />
+                      <formats>
+                        <DesignerControl />
+                      </formats>
+                      <editor>
+                        <dropdownlist dataSource_type="value" dataSource="pipeDataSource2" dataValueField="SYSDEF_CD" dataTextField="SYSDEF_NM" autoOpen="false" editable_type="value" dataPipe="P00010" useDefault="false" defaultValue="" defaultText="">
+                          <dataSelectable />
+                        </dropdownlist>
+                      </editor>
+                      <customExport check="" />
+                      <TempCode>EMPY_SHAPE_CD</TempCode>
+                    </column>
+                    <column field="USRCD2_CD" title="담당직무" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                      <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+                        <referenceFieldArray />
+                      </mergeObject>
+                      <headerCheck used="false" location="right" />
+                      <footer predefined="false" currency_type="value" currency="" align="center">
+                        <group predefined="false" />
+                      </footer>
+                      <footerCollection />
+                      <headerSummary predefined="false" currency_type="value" currency="" align="center" />
+                      <headerSummaryCollection />
+                      <formats>
+                        <DesignerControl />
+                      </formats>
+                      <editor>
+                        <dropdownlist dataSource_type="value" dataSource="pipeDataSource2" dataValueField="SYSDEF_CD" dataTextField="SYSDEF_NM" autoOpen="false" editable_type="value" dataPipe="P00920" useDefault="false" defaultValue="" defaultText="">
+                          <dataSelectable />
+                        </dropdownlist>
+                      </editor>
+                      <customExport check="" />
+                      <TempCode>DUTY_CD</TempCode>
+                    </column>
+                    <column field="USRCD3_CD" title="성별" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                      <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+                        <referenceFieldArray />
+                      </mergeObject>
+                      <headerCheck used="false" location="right" />
+                      <footer predefined="false" currency_type="value" currency="" align="center">
+                        <group predefined="false" />
+                      </footer>
+                      <footerCollection />
+                      <headerSummary predefined="false" currency_type="value" currency="" align="center" />
+                      <headerSummaryCollection />
+                      <formats>
+                        <DesignerControl />
+                      </formats>
+                      <editor>
+                        <dropdownlist dataSource_type="value" dataSource="pipeDataSource2" dataValueField="SYSDEF_CD" dataTextField="SYSDEF_NM" autoOpen="false" editable_type="value" dataPipe="P00630" useDefault="false" defaultValue="" defaultText="">
+                          <dataSelectable />
+                        </dropdownlist>
+                      </editor>
+                      <customExport check="" />
+                      <TempCode>SEX_CD</TempCode>
+                    </column>
+                    <column field="USRQT1_QT" title="인원" width="100" align="right" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                      <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+                        <referenceFieldArray />
+                      </mergeObject>
+                      <headerCheck used="false" location="right" />
+                      <footer predefined="false" currency_type="value" currency="" align="center">
+                        <group predefined="false" />
+                      </footer>
+                      <footerCollection />
+                      <headerSummary predefined="false" currency_type="value" currency="" align="center" />
+                      <headerSummaryCollection />
+                      <formats>
+                        <number predefined="false" format="#,##0" currency_type="value" negativeColor="false" currency="" />
+                      </formats>
+                      <editor>
+                        <numerictextbox predefined="false" format="#,##0" currency_type="value" currency="" increaseType="multiple" increaseValue="" round="round" maxLength="" editable_type="value" />
+                      </editor>
+                      <customExport check="" />
+                      <TempCode>REQN_NOPL_CNT</TempCode>
+                    </column>
+                    <column field="USRCD4_CD" title="학력" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                      <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+                        <referenceFieldArray />
+                      </mergeObject>
+                      <headerCheck used="false" location="right" />
+                      <footer predefined="false" currency_type="value" currency="" align="center">
+                        <group predefined="false" />
+                      </footer>
+                      <footerCollection />
+                      <headerSummary predefined="false" currency_type="value" currency="" align="center" />
+                      <headerSummaryCollection />
+                      <formats>
+                        <DesignerControl />
+                      </formats>
+                      <editor>
+                        <dropdownlist dataSource_type="value" dataSource="pipeDataSource2" dataValueField="SYSDEF_CD" dataTextField="SYSDEF_NM" autoOpen="false" editable_type="value" dataPipe="P00670" useDefault="false" defaultValue="" defaultText="">
+                          <dataSelectable />
+                        </dropdownlist>
+                      </editor>
+                      <customExport check="" />
+                      <TempCode>LEDU_CD</TempCode>
+                    </column>
+                    <column field="USRCD5_CD" title="경력구분" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                      <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+                        <referenceFieldArray />
+                      </mergeObject>
+                      <headerCheck used="false" location="right" />
+                      <footer predefined="false" currency_type="value" currency="" align="center">
+                        <group predefined="false" />
+                      </footer>
+                      <footerCollection />
+                      <headerSummary predefined="false" currency_type="value" currency="" align="center" />
+                      <headerSummaryCollection />
+                      <formats>
+                        <DesignerControl />
+                      </formats>
+                      <editor>
+                        <dropdownlist dataSource_type="value" dataSource="pipeDataSource2" dataValueField="SYSDEF_CD" dataTextField="SYSDEF_NM" autoOpen="false" editable_type="value" dataPipe="P00720" useDefault="false" defaultValue="" defaultText="">
+                          <dataSelectable />
+                        </dropdownlist>
+                      </editor>
+                      <customExport check="" />
+                      <TempCode>JNCO_FG_CD</TempCode>
+                    </column>
+                    <column field="USRCD6_CD" title="직위" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                      <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+                        <referenceFieldArray />
+                      </mergeObject>
+                      <headerCheck used="false" location="right" />
+                      <footer predefined="false" currency_type="value" currency="" align="center">
+                        <group predefined="false" />
+                      </footer>
+                      <footerCollection />
+                      <headerSummary predefined="false" currency_type="value" currency="" align="center" />
+                      <headerSummaryCollection />
+                      <formats>
+                        <DesignerControl />
+                      </formats>
+                      <editor>
+                        <dropdownlist dataSource_type="value" dataSource="pipeDataSource2" dataValueField="SYSDEF_CD" dataTextField="SYSDEF_NM" autoOpen="false" editable_type="value" dataPipe="P00640" useDefault="false" defaultValue="" defaultText="">
+                          <dataSelectable />
+                        </dropdownlist>
+                      </editor>
+                      <customExport check="" />
+                      <TempCode>POSI_CD</TempCode>
+                    </column>
+                    <column field="USRFG2_FG" title="요청이유" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                      <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+                        <referenceFieldArray />
+                      </mergeObject>
+                      <headerCheck used="false" location="right" />
+                      <footer predefined="false" currency_type="value" currency="" align="center">
+                        <group predefined="false" />
+                      </footer>
+                      <footerCollection />
+                      <headerSummary predefined="false" currency_type="value" currency="" align="center" />
+                      <headerSummaryCollection />
+                      <formats>
+                        <DesignerControl />
+                      </formats>
+                      <editor>
+                        <dropdownlist dataSource_type="value" dataSource="pipeDataSource2" dataValueField="SYSDEF_CD" dataTextField="SYSDEF_NM" autoOpen="false" editable_type="value" dataPipe="P01880" useDefault="false" defaultValue="" defaultText="">
+                          <dataSelectable />
+                        </dropdownlist>
+                      </editor>
+                      <customExport check="" />
+                      <TempCode>HIRE_REQN_FG</TempCode>
+                    </column>
+                    <column field="USRCD7_CD" title="채용형태" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                      <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+                        <referenceFieldArray />
+                      </mergeObject>
+                      <headerCheck used="false" location="right" />
+                      <footer predefined="false" currency_type="value" currency="" align="center">
+                        <group predefined="false" />
+                      </footer>
+                      <footerCollection />
+                      <headerSummary predefined="false" currency_type="value" currency="" align="center" />
+                      <headerSummaryCollection />
+                      <formats>
+                        <DesignerControl />
+                      </formats>
+                      <editor>
+                        <dropdownlist dataSource_type="value" dataSource="pipeDataSource2" dataValueField="SYSDEF_CD" dataTextField="SYSDEF_NM" autoOpen="false" editable_type="value" dataPipe="P00010" useDefault="false" defaultValue="" defaultText="">
+                          <dataSelectable />
+                        </dropdownlist>
+                      </editor>
+                      <customExport check="" />
+                      <TempCode>EMPY_SHAPE_CD</TempCode>
+                    </column>
+                    <column field="USRCD8_CD" title="담당직무" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                      <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+                        <referenceFieldArray />
+                      </mergeObject>
+                      <headerCheck used="false" location="right" />
+                      <footer predefined="false" currency_type="value" currency="" align="center">
+                        <group predefined="false" />
+                      </footer>
+                      <footerCollection />
+                      <headerSummary predefined="false" currency_type="value" currency="" align="center" />
+                      <headerSummaryCollection />
+                      <formats>
+                        <DesignerControl />
+                      </formats>
+                      <editor>
+                        <dropdownlist dataSource_type="value" dataSource="pipeDataSource2" dataValueField="SYSDEF_CD" dataTextField="SYSDEF_NM" autoOpen="false" editable_type="value" dataPipe="P00920" useDefault="false" defaultValue="" defaultText="">
+                          <dataSelectable />
+                        </dropdownlist>
+                      </editor>
+                      <customExport check="" />
+                      <TempCode>DUTY_CD</TempCode>
+                    </column>
+                    <column field="USRCD9_CD" title="성별" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                      <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+                        <referenceFieldArray />
+                      </mergeObject>
+                      <headerCheck used="false" location="right" />
+                      <footer predefined="false" currency_type="value" currency="" align="center">
+                        <group predefined="false" />
+                      </footer>
+                      <footerCollection />
+                      <headerSummary predefined="false" currency_type="value" currency="" align="center" />
+                      <headerSummaryCollection />
+                      <formats>
+                        <DesignerControl />
+                      </formats>
+                      <editor>
+                        <dropdownlist dataSource_type="value" dataSource="pipeDataSource2" dataValueField="SYSDEF_CD" dataTextField="SYSDEF_NM" autoOpen="false" editable_type="value" dataPipe="P00630" useDefault="false" defaultValue="" defaultText="">
+                          <dataSelectable />
+                        </dropdownlist>
+                      </editor>
+                      <customExport check="" />
+                      <TempCode>SEX_CD</TempCode>
+                    </column>
+                    <column field="USRQT2_QT" title="인원" width="100" align="right" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                      <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+                        <referenceFieldArray />
+                      </mergeObject>
+                      <headerCheck used="false" location="right" />
+                      <footer predefined="false" currency_type="value" currency="" align="center">
+                        <group predefined="false" />
+                      </footer>
+                      <footerCollection />
+                      <headerSummary predefined="false" currency_type="value" currency="" align="center" />
+                      <headerSummaryCollection />
+                      <formats>
+                        <number predefined="false" format="#,##0" currency_type="value" negativeColor="false" currency="" />
+                      </formats>
+                      <editor>
+                        <numerictextbox predefined="false" format="#,##0" currency_type="value" currency="" increaseType="multiple" increaseValue="" round="round" maxLength="" editable_type="value" />
+                      </editor>
+                      <customExport check="" />
+                      <TempCode>REQN_NOPL_CNT</TempCode>
+                    </column>
+                    <column field="USRCD10_CD" title="학력" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                      <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+                        <referenceFieldArray />
+                      </mergeObject>
+                      <headerCheck used="false" location="right" />
+                      <footer predefined="false" currency_type="value" currency="" align="center">
+                        <group predefined="false" />
+                      </footer>
+                      <footerCollection />
+                      <headerSummary predefined="false" currency_type="value" currency="" align="center" />
+                      <headerSummaryCollection />
+                      <formats>
+                        <DesignerControl />
+                      </formats>
+                      <editor>
+                        <dropdownlist dataSource_type="value" dataSource="pipeDataSource2" dataValueField="SYSDEF_CD" dataTextField="SYSDEF_NM" autoOpen="false" editable_type="value" dataPipe="P00670" useDefault="false" defaultValue="" defaultText="">
+                          <dataSelectable />
+                        </dropdownlist>
+                      </editor>
+                      <customExport check="" />
+                      <TempCode>LEDU_CD</TempCode>
+                    </column>
+                    <column field="USRCD11_CD" title="경력구분" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                      <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+                        <referenceFieldArray />
+                      </mergeObject>
+                      <headerCheck used="false" location="right" />
+                      <footer predefined="false" currency_type="value" currency="" align="center">
+                        <group predefined="false" />
+                      </footer>
+                      <footerCollection />
+                      <headerSummary predefined="false" currency_type="value" currency="" align="center" />
+                      <headerSummaryCollection />
+                      <formats>
+                        <DesignerControl />
+                      </formats>
+                      <editor>
+                        <dropdownlist dataSource_type="value" dataSource="pipeDataSource2" dataValueField="SYSDEF_CD" dataTextField="SYSDEF_NM" autoOpen="false" editable_type="value" dataPipe="P00720" useDefault="false" defaultValue="" defaultText="">
+                          <dataSelectable />
+                        </dropdownlist>
+                      </editor>
+                      <customExport check="" />
+                      <TempCode>JNCO_FG_CD</TempCode>
+                    </column>
+                    <column field="USRCD12_CD" title="직위" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                      <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+                        <referenceFieldArray />
+                      </mergeObject>
+                      <headerCheck used="false" location="right" />
+                      <footer predefined="false" currency_type="value" currency="" align="center">
+                        <group predefined="false" />
+                      </footer>
+                      <footerCollection />
+                      <headerSummary predefined="false" currency_type="value" currency="" align="center" />
+                      <headerSummaryCollection />
+                      <formats>
+                        <DesignerControl />
+                      </formats>
+                      <editor>
+                        <dropdownlist dataSource_type="value" dataSource="pipeDataSource2" dataValueField="SYSDEF_CD" dataTextField="SYSDEF_NM" autoOpen="false" editable_type="value" dataPipe="P00640" useDefault="false" defaultValue="" defaultText="">
+                          <dataSelectable />
+                        </dropdownlist>
+                      </editor>
+                      <customExport check="" />
+                      <TempCode>POSI_CD</TempCode>
+                    </column>
+                  </columns>
+                  <filter filterType="Boolean" filter="true" iconVisible="false" />
+                  <contextObject excelDownload="true" fixed="true" search="true" excelDownloadExpandAll="true" excelFileNameSuffixDate="false" excelFileNameSuffixDateFormat="">
+                    <gridContextItems />
+                  </contextObject>
+                  <detailGrid addedRowDataSourceRead="true" />
+                  <gridGroupColumns />
+                  <fixed colCount="0" rightColCount="0" />
+                  <styles heightTyp="string">
+                    <rowNo />
+                    <cellBorder />
+                    <font bold="false" />
+                    <padding />
+                    <heightObject />
+                  </styles>
+                  <note>
+                    <keys />
+                  </note>
+                </grid>
+              </containerItem>
+            </containerPanel>
+          </containerItem>
+        </containerPanel>
+      </containerItem>
+    </containerPanel>
+  </canvas>
+  <dataSources>
+    <datasource uid="datasource-9fbfad0f8ff54b04a1d2ea4b92a447bc" id="pipeDataSource1" isTreeGrid="false" grid="false" aggregate="false" group="false" userGroup="false" type="dataservice" module="CM" service="CommonCodeDtlService" urlpattern="common_ci_codeDtl_list" params_type="mapping" params="" preview_type="none" preview="" localdata="" url="" useGroup="false" isMultiPipe="true" pipeparam="field_cd_pipe" pipecolumn="FIELD_CD" paging="false" pagingCount="500" error="" DSType="None" isPost="false">
+      <mapping>
+        <param parameter="end_dt" applyType="constant" dataType="string" />
+        <param parameter="foreign_yn" applyType="constant" dataType="string" />
+        <param parameter="field_cd_pipe" applyType="constant" dataType="string" value="P01300" />
+        <param parameter="module_cd" applyType="constant" dataType="string" value="MA" />
+        <param parameter="syscode_yn" applyType="constant" dataType="string" />
+        <param parameter="keyword" applyType="constant" dataType="string" />
+        <param parameter="base_yn" applyType="constant" dataType="string" />
+      </mapping>
+      <columns>
+        <column field="FIELD_CD" unionfield="" dataType="string" editable="false" useType="true" isID="false" isChildren="false" description="디테일코드" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="SYSDEF_CD" unionfield="" dataType="string" editable="false" useType="true" isID="false" isChildren="false" description="코드디테일코드" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="SYSDEF_NM" unionfield="" dataType="string" editable="false" useType="true" isID="false" isChildren="false" description="코드디테일명" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="FLAG_CD" unionfield="" dataType="string" editable="false" useType="true" isID="false" isChildren="false" description="참조코드" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="END_DT" unionfield="" dataType="string" editable="false" useType="true" isID="false" isChildren="false" description="종료일" useAggregate="false" aggregate="" useGroup="false" />
+      </columns>
+      <widgetSampleDatas />
+    </datasource>
+    <datasource uid="datasource-fc84a8559cb94c1abccdc151adbb5bb0" id="pipeDataSource2" isTreeGrid="false" grid="false" aggregate="false" group="false" userGroup="false" type="dataservice" module="CM" service="CommonCodeDtlService" urlpattern="common_ci_codeDtl_list" params_type="mapping" params="" preview_type="none" preview="" localdata="" url="" useGroup="false" isMultiPipe="true" pipeparam="field_cd_pipe" pipecolumn="FIELD_CD" paging="false" pagingCount="500" error="" DSType="None" isPost="false">
+      <mapping>
+        <param parameter="end_dt" applyType="constant" dataType="string" />
+        <param parameter="foreign_yn" applyType="constant" dataType="string" />
+        <param parameter="field_cd_pipe" applyType="constant" dataType="string" value="P00155|P01300|P01880|P00010|P00920|P00630|P00670|P00720|P00640" />
+        <param parameter="module_cd" applyType="constant" dataType="string" value="HR" />
+        <param parameter="syscode_yn" applyType="constant" dataType="string" />
+        <param parameter="keyword" applyType="constant" dataType="string" />
+        <param parameter="base_yn" applyType="constant" dataType="string" />
+      </mapping>
+      <columns>
+        <column field="FIELD_CD" unionfield="" dataType="string" editable="false" useType="true" isID="false" isChildren="false" description="디테일코드" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="SYSDEF_CD" unionfield="" dataType="string" editable="false" useType="true" isID="false" isChildren="false" description="코드디테일코드" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="SYSDEF_NM" unionfield="" dataType="string" editable="false" useType="true" isID="false" isChildren="false" description="코드디테일명" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="FLAG_CD" unionfield="" dataType="string" editable="false" useType="true" isID="false" isChildren="false" description="참조코드" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="END_DT" unionfield="" dataType="string" editable="false" useType="true" isID="false" isChildren="false" description="종료일" useAggregate="false" aggregate="" useGroup="false" />
+      </columns>
+      <widgetSampleDatas />
+    </datasource>
+    <datasource uid="datasource-bd5f88e02f1143758636eba4ec76bfac" id="dataSourceUN_gridMaster1_M" isTreeGrid="false" grid="true" aggregate="false" group="false" userGroup="false" type="dataservice" module="CI" service="CiUsrdeftblService" urlpattern="usrdeftbl_data_param_list" params_type="mapping" params="" preview_type="none" preview="" localdata="" url="" useGroup="false" isMultiPipe="false" pipeparam="" pipecolumn="" paging="false" pagingCount="500" error="" DSType="Grid" isPost="false">
+      <mapping>
+        <param parameter="menu_cd" applyType="constant" dataType="number" value="dews.ui.page.menu.id" />
+        <param parameter="module_cd" applyType="constant" dataType="number" value="dews.ui.page.menu.module" />
+        <param parameter="company_cd" applyType="constant" dataType="number" value="dews.ui.page.user.companyCode" />
+        <param parameter="grp_cd" applyType="constant" dataType="string" value="1" />
+        <param parameter="ver_cd" applyType="constant" dataType="string" value="1" />
+        <param parameter="usrdata_sq" applyType="constant" dataType="number" value="0" />
+        <param parameter="rfr_usrdata_sq" applyType="constant" dataType="number" value="0" />
+      </mapping>
+      <columns>
+        <column field="_uid" unionfield="" dataType="string" editable="false" useType="true" isID="false" isChildren="false" description="_uid" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="MENU_CD" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="MENU_CD" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="GRP_CD" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="GRP_CD" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="VER_CD" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="VER_CD" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="COMPANY_CD" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="COMPANY_CD" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRDATA_SQ" dataType="number" editable="true" useType="true" isID="false" isChildren="false" description="USRDATA_SQ" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="RFR_USRDATA_SQ" dataType="number" editable="true" useType="true" isID="false" isChildren="false" description="RFR_USRDATA_SQ" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRCD1_CD" unionfield="GWAPRVLST_CD" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="결재상태" useAggregate="false" aggregate="" useGroup="false">
+          <TempField>GWAPRVLST_CD</TempField>
+        </column>
+        <column field="USRTXT1_TXT" unionfield="HIRE_TITL_DC" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="제목" useAggregate="false" aggregate="" useGroup="false">
+          <TempField>HIRE_TITL_DC</TempField>
+        </column>
+        <column field="USRCD2_CD" unionfield="WRTR_EMP_NO" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="요청자" useAggregate="false" aggregate="" useGroup="false">
+          <TempField>WRTR_EMP_NO</TempField>
+        </column>
+        <column field="USRCD3_CD" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRCD3_CD" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRCD4_CD" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRCD4_CD" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRCD5_CD" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRCD5_CD" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRCD6_CD" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRCD6_CD" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRCD7_CD" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRCD7_CD" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRCD8_CD" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRCD8_CD" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRCD9_CD" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRCD9_CD" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRCD10_CD" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRCD10_CD" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRCD11_CD" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRCD11_CD" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRCD12_CD" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRCD12_CD" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRCD13_CD" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRCD13_CD" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRCD14_CD" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRCD14_CD" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRCD15_CD" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRCD15_CD" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRQT1_QT" dataType="number" editable="true" useType="true" isID="false" isChildren="false" description="USRQT1_QT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRQT2_QT" dataType="number" editable="true" useType="true" isID="false" isChildren="false" description="USRQT2_QT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRQT3_QT" dataType="number" editable="true" useType="true" isID="false" isChildren="false" description="USRQT3_QT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRQT4_QT" dataType="number" editable="true" useType="true" isID="false" isChildren="false" description="USRQT4_QT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRQT5_QT" dataType="number" editable="true" useType="true" isID="false" isChildren="false" description="USRQT5_QT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRQT6_QT" dataType="number" editable="true" useType="true" isID="false" isChildren="false" description="USRQT6_QT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRQT7_QT" dataType="number" editable="true" useType="true" isID="false" isChildren="false" description="USRQT7_QT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRQT8_QT" dataType="number" editable="true" useType="true" isID="false" isChildren="false" description="USRQT8_QT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRQT9_QT" dataType="number" editable="true" useType="true" isID="false" isChildren="false" description="USRQT9_QT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRQT10_QT" dataType="number" editable="true" useType="true" isID="false" isChildren="false" description="USRQT10_QT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRAMT1_AMT" dataType="number" editable="true" useType="true" isID="false" isChildren="false" description="USRAMT1_AMT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRAMT2_AMT" dataType="number" editable="true" useType="true" isID="false" isChildren="false" description="USRAMT2_AMT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRAMT3_AMT" dataType="number" editable="true" useType="true" isID="false" isChildren="false" description="USRAMT3_AMT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRAMT4_AMT" dataType="number" editable="true" useType="true" isID="false" isChildren="false" description="USRAMT4_AMT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRAMT5_AMT" dataType="number" editable="true" useType="true" isID="false" isChildren="false" description="USRAMT5_AMT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRAMT6_AMT" dataType="number" editable="true" useType="true" isID="false" isChildren="false" description="USRAMT6_AMT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRAMT7_AMT" dataType="number" editable="true" useType="true" isID="false" isChildren="false" description="USRAMT7_AMT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRAMT8_AMT" dataType="number" editable="true" useType="true" isID="false" isChildren="false" description="USRAMT8_AMT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRAMT9_AMT" dataType="number" editable="true" useType="true" isID="false" isChildren="false" description="USRAMT9_AMT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRAMT10_AMT" dataType="number" editable="true" useType="true" isID="false" isChildren="false" description="USRAMT10_AMT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRDT1_DT" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRDT1_DT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRDT2_DT" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRDT2_DT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRDT3_DT" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRDT3_DT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRDT4_DT" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRDT4_DT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRDT5_DT" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRDT5_DT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRDT6_DT" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRDT6_DT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRDT7_DT" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRDT7_DT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRDT8_DT" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRDT8_DT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRDT9_DT" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRDT9_DT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRDT10_DT" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRDT10_DT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRSTR1_NM" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRSTR1_NM" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRSTR2_NM" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRSTR2_NM" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRSTR3_NM" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRSTR3_NM" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRSTR4_NM" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRSTR4_NM" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRSTR5_NM" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRSTR5_NM" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRSTR6_NM" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRSTR6_NM" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRSTR7_NM" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRSTR7_NM" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRSTR8_NM" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRSTR8_NM" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRSTR9_NM" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRSTR9_NM" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRSTR10_NM" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRSTR10_NM" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRSTR11_NM" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRSTR11_NM" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRSTR12_NM" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRSTR12_NM" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRSTR13_NM" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRSTR13_NM" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRSTR14_NM" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRSTR14_NM" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRSTR15_NM" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRSTR15_NM" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRFG1_FG" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRFG1_FG" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRFG2_FG" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRFG2_FG" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRFG3_FG" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRFG3_FG" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRFG4_FG" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRFG4_FG" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRFG5_FG" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRFG5_FG" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRYN1_YN" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRYN1_YN" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRYN2_YN" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRYN2_YN" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRYN3_YN" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRYN3_YN" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRYN4_YN" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRYN4_YN" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRYN5_YN" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRYN5_YN" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRTXT2_TXT" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRTXT2_TXT" useAggregate="false" aggregate="" useGroup="false" />
+      </columns>
+      <widgetSampleDatas />
+    </datasource>
+    <datasource uid="datasource-3dbd166746a34f45aa0905667e38184a" id="dataSourceUN_gridDetail1_M" isTreeGrid="false" grid="true" aggregate="false" group="false" userGroup="false" type="dataservice" module="CI" service="CiUsrdeftblService" urlpattern="usrdeftbl_data_rfr_usrdata_sq_list" params_type="mapping" params="" preview_type="none" preview="" localdata="" url="" useGroup="false" isMultiPipe="false" pipeparam="" pipecolumn="" paging="false" pagingCount="500" error="" DSType="Grid" isPost="false">
+      <mapping>
+        <param parameter="menu_cd" applyType="constant" dataType="number" value="dews.ui.page.menu.id" />
+        <param parameter="module_cd" applyType="constant" dataType="number" value="dews.ui.page.menu.module" />
+        <param parameter="company_cd" applyType="constant" dataType="number" value="dews.ui.page.user.companyCode" />
+        <param parameter="grp_cd" applyType="constant" dataType="string" value="1" />
+        <param parameter="ver_cd" applyType="constant" dataType="string" value="1" />
+        <param parameter="rfr_usrdata_sq" applyType="control" dataType="gridMaster1" value="selectedRow.USRDATA_SQ" />
+      </mapping>
+      <columns>
+        <column field="MENU_CD" dataType="string" editable="true" useType="true" isID="true" isChildren="false" description="MENU_CD" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="GRP_CD" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="GRP_CD" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="VER_CD" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="VER_CD" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="COMPANY_CD" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="COMPANY_CD" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRDATA_SQ" dataType="number" editable="true" useType="true" isID="false" isChildren="false" description="USRDATA_SQ" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="RFR_USRDATA_SQ" dataType="number" editable="true" useType="true" isID="false" isChildren="false" description="RFR_USRDATA_SQ" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRFG1_FG" unionfield="HIRE_REQN_FG" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="요청이유" useAggregate="false" aggregate="" useGroup="false">
+          <TempField>HIRE_REQN_FG</TempField>
+        </column>
+        <column field="USRCD1_CD" unionfield="EMPY_SHAPE_CD" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="채용형태" useAggregate="false" aggregate="" useGroup="false">
+          <TempField>EMPY_SHAPE_CD</TempField>
+        </column>
+        <column field="USRCD2_CD" unionfield="DUTY_CD" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="담당직무" useAggregate="false" aggregate="" useGroup="false">
+          <TempField>DUTY_CD</TempField>
+        </column>
+        <column field="USRCD3_CD" unionfield="SEX_CD" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="성별" useAggregate="false" aggregate="" useGroup="false">
+          <TempField>SEX_CD</TempField>
+        </column>
+        <column field="USRQT1_QT" unionfield="REQN_NOPL_CNT" dataType="number" editable="true" useType="true" isID="false" isChildren="false" description="인원" useAggregate="false" aggregate="" useGroup="false">
+          <TempField>REQN_NOPL_CNT</TempField>
+        </column>
+        <column field="USRCD4_CD" unionfield="LEDU_CD" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="학력" useAggregate="false" aggregate="" useGroup="false">
+          <TempField>LEDU_CD</TempField>
+        </column>
+        <column field="USRCD5_CD" unionfield="JNCO_FG_CD" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="경력구분" useAggregate="false" aggregate="" useGroup="false">
+          <TempField>JNCO_FG_CD</TempField>
+        </column>
+        <column field="USRCD6_CD" unionfield="POSI_CD" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="직위" useAggregate="false" aggregate="" useGroup="false">
+          <TempField>POSI_CD</TempField>
+        </column>
+        <column field="USRFG2_FG" unionfield="HIRE_REQN_FG" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="요청이유" useAggregate="false" aggregate="" useGroup="false">
+          <TempField>HIRE_REQN_FG</TempField>
+        </column>
+        <column field="USRCD7_CD" unionfield="EMPY_SHAPE_CD" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="채용형태" useAggregate="false" aggregate="" useGroup="false">
+          <TempField>EMPY_SHAPE_CD</TempField>
+        </column>
+        <column field="USRCD8_CD" unionfield="DUTY_CD" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="담당직무" useAggregate="false" aggregate="" useGroup="false">
+          <TempField>DUTY_CD</TempField>
+        </column>
+        <column field="USRCD9_CD" unionfield="SEX_CD" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="성별" useAggregate="false" aggregate="" useGroup="false">
+          <TempField>SEX_CD</TempField>
+        </column>
+        <column field="USRQT2_QT" unionfield="REQN_NOPL_CNT" dataType="number" editable="true" useType="true" isID="false" isChildren="false" description="인원" useAggregate="false" aggregate="" useGroup="false">
+          <TempField>REQN_NOPL_CNT</TempField>
+        </column>
+        <column field="USRCD10_CD" unionfield="LEDU_CD" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="학력" useAggregate="false" aggregate="" useGroup="false">
+          <TempField>LEDU_CD</TempField>
+        </column>
+        <column field="USRCD11_CD" unionfield="JNCO_FG_CD" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="경력구분" useAggregate="false" aggregate="" useGroup="false">
+          <TempField>JNCO_FG_CD</TempField>
+        </column>
+        <column field="USRCD12_CD" unionfield="POSI_CD" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="직위" useAggregate="false" aggregate="" useGroup="false">
+          <TempField>POSI_CD</TempField>
+        </column>
+        <column field="USRCD13_CD" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRCD13_CD" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRCD14_CD" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRCD14_CD" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRCD15_CD" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRCD15_CD" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRQT3_QT" dataType="number" editable="true" useType="true" isID="false" isChildren="false" description="USRQT3_QT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRQT4_QT" dataType="number" editable="true" useType="true" isID="false" isChildren="false" description="USRQT4_QT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRQT5_QT" dataType="number" editable="true" useType="true" isID="false" isChildren="false" description="USRQT5_QT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRQT6_QT" dataType="number" editable="true" useType="true" isID="false" isChildren="false" description="USRQT6_QT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRQT7_QT" dataType="number" editable="true" useType="true" isID="false" isChildren="false" description="USRQT7_QT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRQT8_QT" dataType="number" editable="true" useType="true" isID="false" isChildren="false" description="USRQT8_QT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRQT9_QT" dataType="number" editable="true" useType="true" isID="false" isChildren="false" description="USRQT9_QT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRQT10_QT" dataType="number" editable="true" useType="true" isID="false" isChildren="false" description="USRQT10_QT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRAMT1_AMT" dataType="number" editable="true" useType="true" isID="false" isChildren="false" description="USRAMT1_AMT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRAMT2_AMT" dataType="number" editable="true" useType="true" isID="false" isChildren="false" description="USRAMT2_AMT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRAMT3_AMT" dataType="number" editable="true" useType="true" isID="false" isChildren="false" description="USRAMT3_AMT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRAMT4_AMT" dataType="number" editable="true" useType="true" isID="false" isChildren="false" description="USRAMT4_AMT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRAMT5_AMT" dataType="number" editable="true" useType="true" isID="false" isChildren="false" description="USRAMT5_AMT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRAMT6_AMT" dataType="number" editable="true" useType="true" isID="false" isChildren="false" description="USRAMT6_AMT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRAMT7_AMT" dataType="number" editable="true" useType="true" isID="false" isChildren="false" description="USRAMT7_AMT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRAMT8_AMT" dataType="number" editable="true" useType="true" isID="false" isChildren="false" description="USRAMT8_AMT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRAMT9_AMT" dataType="number" editable="true" useType="true" isID="false" isChildren="false" description="USRAMT9_AMT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRAMT10_AMT" dataType="number" editable="true" useType="true" isID="false" isChildren="false" description="USRAMT10_AMT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRDT1_DT" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRDT1_DT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRDT2_DT" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRDT2_DT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRDT3_DT" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRDT3_DT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRDT4_DT" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRDT4_DT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRDT5_DT" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRDT5_DT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRDT6_DT" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRDT6_DT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRDT7_DT" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRDT7_DT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRDT8_DT" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRDT8_DT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRDT9_DT" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRDT9_DT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRDT10_DT" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRDT10_DT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRSTR1_NM" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRSTR1_NM" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRSTR2_NM" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRSTR2_NM" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRSTR3_NM" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRSTR3_NM" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRSTR4_NM" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRSTR4_NM" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRSTR5_NM" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRSTR5_NM" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRSTR6_NM" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRSTR6_NM" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRSTR7_NM" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRSTR7_NM" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRSTR8_NM" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRSTR8_NM" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRSTR9_NM" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRSTR9_NM" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRSTR10_NM" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRSTR10_NM" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRSTR11_NM" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRSTR11_NM" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRSTR12_NM" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRSTR12_NM" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRSTR13_NM" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRSTR13_NM" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRSTR14_NM" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRSTR14_NM" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRSTR15_NM" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRSTR15_NM" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRFG3_FG" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRFG3_FG" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRFG4_FG" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRFG4_FG" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRFG5_FG" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRFG5_FG" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRYN1_YN" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRYN1_YN" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRYN2_YN" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRYN2_YN" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRYN3_YN" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRYN3_YN" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRYN4_YN" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRYN4_YN" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRYN5_YN" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRYN5_YN" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRTXT1_TXT" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRTXT1_TXT" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="USRTXT2_TXT" dataType="string" editable="true" useType="true" isID="false" isChildren="false" description="USRTXT2_TXT" useAggregate="false" aggregate="" useGroup="false" />
+      </columns>
+      <widgetSampleDatas />
+    </datasource>
+  </dataSources>
+  <pageMarkDown><![CDATA[]]></pageMarkDown>
+  <pageCssStyle><![CDATA[]]></pageCssStyle>
+  <stylesheets />
+  <javascripts>
+    <javascript id="604a135a-3ee1-499c-b461-e1ea6cf0ea2c"><![CDATA[function() {
+  self.gridMaster1.addRow();
+  self.gridMaster1.setCellValue(self.gridMaster1.select(), 'MENU_CD', dews.ui.page.menu.id);
+  self.gridMaster1.setCellValue(self.gridMaster1.select(), 'COMPANY_CD', dews.ui.page.user.companyCode);
+  self.gridMaster1.setCellValue(self.gridMaster1.select(), 'GRP_CD', '1');
+  self.gridMaster1.setCellValue(self.gridMaster1.select(), 'VER_CD', '1');
+}
+]]></javascript>
+    <javascript id="b5ce1a8d-65f8-4635-b7f4-3f388e8bdea7"><![CDATA[function() {
+self.dataSourceUN_gridMaster1_M.read();}
+]]></javascript>
+    <javascript id="58da47d1-3711-4d09-929e-461458f2c44a"><![CDATA[function() {
+self.gridMaster1.removeRow(self.gridMaster1.select());}
+]]></javascript>
+    <javascript id="f57f56e9-b3c8-4d86-9219-28794d930f4a"><![CDATA[function() {
+  var dirtyCountgridMaster1 = self.dataSourceUN_gridMaster1_M.getDirtyDataCount();
+  var dirtyCountgridDetail1 = self.dataSourceUN_gridDetail1_M.getDirtyDataCount();
+  if (dirtyCountgridMaster1 == 0 && dirtyCountgridDetail1 == 0) {
+    dews.alert('변경된 데이터가 없습니다.');
+  }
+  if (self.gridMaster1.validate().result == false) {
+    dews.alert('그리드 gridMaster1에 필수 값이 입력되지 않은 항목이 있습니다.');
+  }
+  dews.confirm('수정 된 데이터를 저장 하시겠습니까?', 'question').yes(function () {
+    dews.api.post(dews.url.getApiUrl('CI', 'CiUsrdeftblService', 'usrdeftbl_data_milti_save'), {
+      async: true,
+      data: {
+        module_cd: dews.ui.page.menu.module,
+        Usrdeftbl_Data_Mst: JSON.stringify(self.dataSourceUN_gridMaster1_M.getDirtyData()),
+        Usrdeftbl_Data_Dtl: JSON.stringify(self.dataSourceUN_gridDetail1_M.getDirtyData())
+      }
+    }).done(function (data) {
+      dews.ui.snackbar.ok('저장이 완료되었습니다.');
+      self.dataSourceUN_gridMaster1_M.read();
+    }).fail(function () {
+      dews.error('저장에 실패 했습니다.');
+    });
+  });
+}
+]]></javascript>
+    <javascript id="2f80a735-5783-45ec-adec-6ce07bada9df"><![CDATA[function() {
+  self.gridDetail1.addRow();
+  self.gridDetail1.setCellValue(self.gridDetail1.select(), 'MENU_CD', dews.ui.page.menu.id);
+  self.gridDetail1.setCellValue(self.gridDetail1.select(), 'COMPANY_CD', dews.ui.page.user.companyCode);
+  self.gridDetail1.setCellValue(self.gridDetail1.select(), 'GRP_CD', '1');
+  self.gridDetail1.setCellValue(self.gridDetail1.select(), 'VER_CD', '1');
+  self.gridDetail1.setCellValue(self.gridDetail1.select(), 'RFR_USRDATA_SQ', self.gridMaster1.dataItem(self.gridMaster1.select()).USRDATA_SQ);
+
+}
+]]></javascript>
+    <javascript id="26422c31-6c89-45b9-a983-ca00a83372f9"><![CDATA[function() {
+self.gridDetail1.removeRow(self.gridDetail1.select());
+}
+]]></javascript>
+  </javascripts>
+  <settings />
+  <datas />
+</page>
