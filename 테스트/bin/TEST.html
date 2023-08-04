@@ -1,6 +1,6 @@
-<!--##b89ed431-5f0c-4c88-9b01-7c789c42a296##-->
+<!--##14c7d1cc-232b-45cd-a670-cf52f4e2e3bf##-->
 <!--##TEST##-->
-<!--##4Irp5hsq/VpGoJ0h2c31VQ==##-->
+<!--##pSmFzsd+5b8JiP7q6lvdyg==##-->
 <!--
   DEWS UI/UX IDE - Build Result - v1.5
   # PageID: TEST
@@ -12,7 +12,7 @@
 -->
 
 <div id="grid1" class="dews-ui-grid"></div>
-<div id="conditionpanel1" class="dews-ui-condition-panel" data-dews-label-align="left">
+<div id="conditionpanel1" class="dews-ui-condition-panel" data-dews-columns="4" data-dews-label-align="left">
   <ul class="required-area">
     <li>
       <label class="dews-ui-multilingual">회계단위</label>
@@ -32,10 +32,65 @@
         <select id="ddl1" name="ddl1" class="dews-ui-dropdownlist basic" data-dews-value-field="SYSDEF_CD" data-dews-text-field="SYSDEF_NM" data-dews-show-tooltip="true" data-dews-show-value-tooltip="true" data-dews-use-numkey="false"></select>
       </span>
     </li>
-    <li>
+    <li class="col-4">
       <label class="dews-ui-multilingual">라벨</label>
       <span>
         <input id="chk1" name="chk1" type="checkbox" class="dews-ui-checkbox" />
+      </span>
+    </li>
+    <li>
+      <label class="dews-ui-multilingual">라벨</label>
+      <span>
+        <button id="btn1" class="dews-ui-button confirm emphasize blue"></button>
+      </span>
+    </li>
+    <li>
+      <label class="dews-ui-multilingual">라벨</label>
+      <span>
+        <input id="chk2" name="chk2" type="checkbox" class="dews-ui-checkbox" />
+      </span>
+    </li>
+    <li>
+      <label class="dews-ui-multilingual">라벨</label>
+      <span>
+        <input id="txt2" name="txt2" type="text" value="텍스트박스" class="dews-ui-textbox basic" />
+      </span>
+    </li>
+    <li>
+      <label class="dews-ui-multilingual">라벨</label>
+      <span>
+        <input id="ntxt1" name="ntxt1" type="text" class="dews-ui-numerictextbox basic" value="1" data-dews-increase-type="multiple" data-dews-increase-value="1000" data-dews-spinners="true" data-dews-round="round" data-dews-min="1" data-dews-max="10000" data-dews-max-length="10000" style="width: 147px;" />
+      </span>
+    </li>
+    <li>
+      <label class="dews-ui-multilingual">라벨</label>
+      <span>
+        <input id="mtxt1" name="mtxt1" type="text" class="dews-ui-maskedtextbox basic" style="width: 145px;" />
+      </span>
+    </li>
+    <li class="col-2">
+      <label class="dews-ui-multilingual">라벨</label>
+      <span>
+        <input type="text" id="cdp1" name="cdp1" class="dews-ui-codepicker basic" data-dews-help-code="H_MA_DEPT_MST_S" data-dews-code-field="DEPT_CD" data-dews-text-field="DEPT_NM" data-dews-help-title="부서 도움창" data-dews-help-custom="false" data-dews-help-size="medium" data-dews-ajax="true" />
+      </span>
+    </li>
+    <li class="col-2">
+      <label class="dews-ui-multilingual">라벨</label>
+      <span>
+        <select id="mcdp1" name="mcdp1" class="dews-ui-multicodepicker basic" data-dews-help-custom="false" data-dews-help-size="medium" />
+      </span>
+    </li>
+    <li class="col-2">
+      <label class="dews-ui-multilingual">우편번호피커</label>
+      <span>
+        <input id="aaa" class="dews-ui-zipcodepicker basic" data-dews-address-bind="bbb" />
+        <input id="bbb" name="bbb" type="text" class="dews-ui-textbox" style="width: 274px;" />
+      </span>
+    </li>
+    <li>
+      <label class="dews-ui-multilingual">라벨</label>
+      <span>
+        <select id="ddl2" name="ddl2" class="dews-ui-dropdownlist basic" data-dews-value-field="SYSDEF_CD" data-dews-text-field="SYSDEF_NM" data-dews-show-tooltip="true" data-dews-show-value-tooltip="true" data-dews-use-numkey="false"></select>
       </span>
     </li>
   </ul>
@@ -77,6 +132,30 @@
         }
     ]
     });
+    dews.api.get(dews.url.getApiUrl('CM', 'CommonCodeDtlService', 'common_ci_codeDtl_list'),{
+      async: false,
+      data: {
+          end_dt: '',
+          foreign_yn: '',
+          field_cd_pipe: 'P00640',
+          module_cd: 'HR',
+          syscode_yn: '',
+          keyword: '',
+          base_yn: ''
+      }
+    }).done(function (data) {
+      var ar_P00640 = new Array();
+    
+      for (var i = 0; i < data.length; i++) {
+        if (data[i].FIELD_CD == "P00640") { 
+          ar_P00640.push(data[i]); 
+    
+        }
+      }
+      self.pipeDataSource1_P00640 = dews.ui.dataSource('pipeDataSource1_P00640',  { data: ar_P00640 });
+      self.pipeDataSource1 = dews.ui.dataSource('pipeDataSource1', { data: data });
+      
+    });
     
     
     dews.ui.mainbuttons.localize.disable(true);
@@ -91,6 +170,17 @@
       }
     });
     self.ddl1.setDataSource(self.localDataSource1);
+    self.cdp1.setHelpParams(function () {
+      return {
+        company_cd: '',
+        auth_bizarea: '',
+        auth_pc: '',
+        auth_dept: '',
+        up_dept_cd: '',
+        dept_lv: ''
+      };
+    });
+    self.ddl2.setDataSource(self.pipeDataSource1_P00640);
     
     
     
