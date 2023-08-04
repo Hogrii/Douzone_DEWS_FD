@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Environment>
+  <server>
+    <url>http://localhost:8090</url>
+  </server>
+  <serverdbsearch>
+    <url>http://localhost:8090</url>
+  </serverdbsearch>
+  <module>
+    <name>BI</name>
+    <desc>Business Intelligence</desc>
+  </module>
+  <variables />
+  <BaseInfo>
+    <UID>c77d8f29-661f-4fc7-8d45-5d3fb60fba2d</UID>
+  </BaseInfo>
+</Environment>
