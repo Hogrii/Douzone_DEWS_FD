@@ -10,8 +10,9 @@
     <name>HR</name>
     <desc>인사관리</desc>
   </module>
-  <variables />
   <BaseInfo>
     <UID>8853a980-d022-42a9-9deb-11e8264fa4e8</UID>
   </BaseInfo>
+  <variables />
+  <outputs />
 </Environment>

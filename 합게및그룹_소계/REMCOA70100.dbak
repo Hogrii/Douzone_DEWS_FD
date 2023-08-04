@@ -5,9 +5,9 @@
       <version>1.0</version>
       <create>edu13</create>
       <modify>edu13</modify>
-      <builddate>2023-08-04T16:40:57.7418158+09:00</builddate>
+      <builddate>2023-08-04T16:46:06.4976379+09:00</builddate>
       <createdate>2023-08-04T16:17:30.4037801+09:00</createdate>
-      <modifieddate>2023-08-04T16:40:57.7418158+09:00</modifieddate>
+      <modifieddate>2023-08-04T16:46:06.4976379+09:00</modifieddate>
     </pageInformation>
     <mainButtons uid="mainButtons-1385142915113">
       <mainButton uid="mainButton-1485142971049" id="information" buttonAttr="normal" type="information" />
@@ -123,7 +123,7 @@
     </containerPanel>
   </canvas>
   <dataSources>
-    <datasource uid="datasource-b940dd0182964e078a0c1669b3061df7" id="ds1" isTreeGrid="false" grid="true" aggregate="false" group="false" userGroup="false" type="localdata" module="" service="" urlpattern="" params_type="none" params="" preview_type="none" preview="" localdata="23b4b92a-b237-471b-a22b-9fbfb8dbb48f" url="" useGroup="false" isMultiPipe="false" pipeparam="" pipecolumn="" paging="false" pagingCount="500" error="" DSType="Grid" isPost="false">
+    <datasource uid="datasource-b940dd0182964e078a0c1669b3061df7" id="ds1" isTreeGrid="false" grid="true" aggregate="false" group="false" userGroup="true" type="localdata" module="" service="" urlpattern="" params_type="none" params="" preview_type="none" preview="" localdata="23b4b92a-b237-471b-a22b-9fbfb8dbb48f" url="" useGroup="false" isMultiPipe="false" pipeparam="" pipecolumn="" paging="false" pagingCount="500" error="" DSType="Grid" isPost="false">
       <mapping />
       <columns>
         <column field="지점" unionfield="" dataType="string" editable="false" useType="true" isID="false" isChildren="false" description="" useAggregate="false" aggregate="" useGroup="false" />
