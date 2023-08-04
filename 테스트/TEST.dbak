@@ -5,9 +5,9 @@
       <version>1.0</version>
       <create>edu13</create>
       <modify>edu13</modify>
-      <builddate>2023-08-03T15:23:43.2836427+09:00</builddate>
+      <builddate>2023-08-04T09:42:57.3073848+09:00</builddate>
       <createdate>2023-08-03T13:14:36.5435222+09:00</createdate>
-      <modifieddate>2023-08-03T15:23:43.2836427+09:00</modifieddate>
+      <modifieddate>2023-08-04T09:42:57.3073848+09:00</modifieddate>
     </pageInformation>
     <mainButtons uid="mainButtons-1385142915113">
       <mainButton uid="mainButton-1485142971049" id="information" buttonAttr="normal" type="information" />
@@ -21,7 +21,27 @@
       <mainButton uid="mainButton-1485142971056" id="save" buttonAttr="normal" type="save" />
       <mainButton uid="mainButton-1485142971057" id="configure" buttonAttr="normal" type="configure" />
     </mainButtons>
-    <conditionPanel uid="conditionPanel-268b1292" id="conditionpanel1" margin="false" optional="false" optionalcollapsed="true" columnLength="3" labelAlign="left">
+    <grid uid="grid-c4d1bb70" id="grid1" dataSource="" height_type="px" editable="false" movable="false" rowNo="true" selectable="false" checkable="false" pasteAddRowEvent="false" sortable="false" shiftCheck="false" autoBind="false" requiredCheck="false" stateColumn="false" noData="false" noDataMessage="데이터가 없습니다" fillWidth="true" resizable="true" contextType="Boolean" context="false" contextex="true" skipEdit="false" copyMode="cell" multiFooterCnt="0" multiHeaderSummaryCnt="0" useGridUserGroup="false">
+      <columns />
+      <filter filterType="Boolean" filter="true" iconVisible="false" />
+      <contextObject excelDownload="true" fixed="true" search="true" excelDownloadExpandAll="true" excelFileNameSuffixDate="false" excelFileNameSuffixDateFormat="">
+        <gridContextItems />
+      </contextObject>
+      <detailGrid addedRowDataSourceRead="true" />
+      <gridGroupColumns />
+      <fixed colCount="0" rightColCount="0" />
+      <styles heightTyp="string">
+        <rowNo />
+        <cellBorder />
+        <font bold="false" />
+        <padding />
+        <heightObject />
+      </styles>
+      <note>
+        <keys />
+      </note>
+    </grid>
+    <conditionPanel uid="conditionPanel-268b1292" id="conditionpanel1" margin="false" optional="false" optionalcollapsed="true" columnLength="4" labelAlign="left">
       <conditionGroup uid="conditionGroup-436f416c" type="required">
         <conditionItem uid="conditionItem-b36ca75400874dab8d4d14b8a3e06833" columnSize="1" text="회계단위">
           <textbox uid="textBox-638711ab917b43fc9bf287f3a7913763" id="txt1" disabled="false" readonly="false" predefined="false" useSecureMask="false" multiline="false" width_type="px" height_type="px" rows="0" maxlength="0" password="false">
@@ -38,6 +58,48 @@
             <designerComment>조회구분</designerComment>
           </dropdownlist>
         </conditionItem>
+        <conditionItem uid="conditionItem-592641d7" columnSize="4" text="라벨" state="basic">
+          <checkbox uid="checkbox-ff92e53d" id="chk1" disabled="false" checked="false" />
+        </conditionItem>
+        <conditionItem uid="conditionItem-5da32f77" columnSize="1" text="라벨" state="basic">
+          <button uid="button-6c2ea10e" id="btn1" buttonType="confirm" useemphasize="true" emphasize="blue" disabled="false" />
+        </conditionItem>
+        <conditionItem uid="conditionItem-0e2c2a38" columnSize="1" text="라벨" state="basic">
+          <checkbox uid="checkbox-01ec4c13" id="chk2" disabled="false" checked="false" />
+        </conditionItem>
+        <conditionItem uid="conditionItem-f37cd485" columnSize="1" text="라벨" state="basic">
+          <textbox uid="textbox-6c89d79b" id="txt2" disabled="false" readonly="false" state="basic" predefined="false" useSecureMask="false" multiline="false" width_type="px" height_type="px" rows="0" maxlength="0" text="텍스트박스" password="false" />
+        </conditionItem>
+        <conditionItem uid="conditionItem-9771929d" columnSize="1" text="라벨" state="basic">
+          <numerictextbox uid="numerictextbox-39e51aa0" id="ntxt1" disabled="false" readonly="false" state="basic" spinners="true" step="1" predefined="false" format="#,##0.##" currency="" increaseValue="1000" increaseType="multiple" restrictDecimals="false" selectOnFocus="false" round="round" width_type="px" width="147" min="1" max="10000" maxLength="10000" value="1" />
+        </conditionItem>
+        <conditionItem uid="conditionItem-f1200926" columnSize="1" text="라벨" state="basic">
+          <maskedtextbox uid="maskedtextbox-b414e6d5" id="mtxt1" disabled="false" readonly="false" state="basic" prompt="_" unmaskOnPost="true" predefined="false" width_type="px" width="145" />
+        </conditionItem>
+        <conditionItem uid="conditionItem-0377d6de" columnSize="2" text="라벨" state="basic">
+          <codepicker uid="codepicker-7b37f2c6" id="cdp1" disabled="false" readonly="false" state="basic" helpCode="H_MA_DEPT_MST_S" codeField="DEPT_CD" textField="DEPT_NM" helpCustom="false" helpParams_type="mapping" helpTitle="부서 도움창" helpSize="medium" useKeyword="true" clearKeyword="false" ajax="true" width_type="px">
+            <mapping>
+              <param parameter="company_cd" applyType="constant" />
+              <param parameter="auth_bizarea" applyType="constant" />
+              <param parameter="auth_pc" applyType="constant" />
+              <param parameter="auth_dept" applyType="constant" />
+              <param parameter="up_dept_cd" applyType="constant" />
+              <param parameter="dept_lv" applyType="constant" />
+            </mapping>
+          </codepicker>
+        </conditionItem>
+        <conditionItem uid="conditionItem-940a02fa" columnSize="2" text="라벨" state="basic">
+          <multicodepicker uid="multicodepicker-13a8331a" id="mcdp1" disabled="false" readonly="false" ajax="false" state="basic" virtualScroll="false" helpCustom="false" helpSize="medium" width_type="px">
+            <mapping />
+          </multicodepicker>
+        </conditionItem>
+        <conditionItem uid="conditionItem-a3d603250fbf48d8a83c5c9bfc81a3f8" columnSize="2" text="우편번호피커">
+          <zipcodepicker uid="zipcodepicker-02859990a565438b99a2619004dd1b03" id="aaa" disabled="false" state="basic" addressBind="bbb" addressType="street" />
+          <textbox uid="textbox-1b68bad1a4464a3880824f1076685387" id="bbb" disabled="false" readonly="false" predefined="false" useSecureMask="false" multiline="false" width_type="px" width="274" height_type="px" height="" rows="0" maxlength="0" password="false" />
+        </conditionItem>
+        <conditionItem uid="conditionItem-328247dd" columnSize="1" text="라벨" state="basic">
+          <dropdownlist uid="dropdownlist-de1c0747" id="ddl2" autoBind="true" dataSource="pipeDataSource1" valueField="SYSDEF_CD" textField="SYSDEF_NM" pipeparam="P00640" useDefault="false" defaultValue="" defaultText="" width_type="px" disabled="false" readonly="false" autoOpen="false" useNumkey="false" showTooltip="true" showValueTooltip="true" state="basic" />
+        </conditionItem>
       </conditionGroup>
     </conditionPanel>
   </canvas>
@@ -47,6 +109,25 @@
       <columns>
         <column field="SYSDEF_CD" unionfield="" dataType="string" editable="false" useType="true" isID="false" isChildren="false" description="코드" useAggregate="false" aggregate="" useGroup="false" />
         <column field="SYSDEF_NM" unionfield="" dataType="string" editable="false" useType="true" isID="false" isChildren="false" description="이름" useAggregate="false" aggregate="" useGroup="false" />
+      </columns>
+      <widgetSampleDatas />
+    </datasource>
+    <datasource uid="datasource-acdbee4692f2455fb27a1e98e29159fa" id="pipeDataSource1" isTreeGrid="false" grid="false" aggregate="false" group="false" userGroup="false" type="dataservice" module="CM" service="CommonCodeDtlService" urlpattern="common_ci_codeDtl_list" params_type="mapping" params="" preview_type="none" preview="" localdata="" url="" useGroup="false" isMultiPipe="true" pipeparam="field_cd_pipe" pipecolumn="FIELD_CD" paging="false" pagingCount="500" error="" DSType="None" isPost="false">
+      <mapping>
+        <param parameter="end_dt" applyType="constant" dataType="string" />
+        <param parameter="foreign_yn" applyType="constant" dataType="string" />
+        <param parameter="field_cd_pipe" applyType="constant" dataType="string" value="P00640" />
+        <param parameter="module_cd" applyType="constant" dataType="string" value="HR" />
+        <param parameter="syscode_yn" applyType="constant" dataType="string" />
+        <param parameter="keyword" applyType="constant" dataType="string" />
+        <param parameter="base_yn" applyType="constant" dataType="string" />
+      </mapping>
+      <columns>
+        <column field="FIELD_CD" unionfield="" dataType="string" editable="false" useType="true" isID="false" isChildren="false" description="디테일코드" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="SYSDEF_CD" unionfield="" dataType="string" editable="false" useType="true" isID="false" isChildren="false" description="코드디테일코드" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="SYSDEF_NM" unionfield="" dataType="string" editable="false" useType="true" isID="false" isChildren="false" description="코드디테일명" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="FLAG_CD" unionfield="" dataType="string" editable="false" useType="true" isID="false" isChildren="false" description="참조코드" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="END_DT" unionfield="" dataType="string" editable="false" useType="true" isID="false" isChildren="false" description="종료일" useAggregate="false" aggregate="" useGroup="false" />
       </columns>
       <widgetSampleDatas />
     </datasource>

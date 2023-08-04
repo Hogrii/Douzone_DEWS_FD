@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page title="연습" name="TEST2" type="page">
+  <canvas uid="canvas-1485142915100" type="page" title="연습" component="" function="">
+    <pageInformation>
+      <version>1.0</version>
+      <create>edu13</create>
+      <builddate d4p1:nil="true" xmlns:d4p1="http://www.w3.org/2001/XMLSchema-instance" />
+      <createdate>2023-08-04T10:05:26.1785226+09:00</createdate>
+      <modifieddate d4p1:nil="true" xmlns:d4p1="http://www.w3.org/2001/XMLSchema-instance" />
+    </pageInformation>
+    <mainButtons uid="mainButtons-1385142915113">
+      <mainButton uid="mainButton-1485142971049" id="information" buttonAttr="normal" type="information" />
+      <mainButton uid="mainButton-1485142971050" id="localize" buttonAttr="disabled" type="localize" />
+      <mainButton uid="mainButton-1485142971051" id="approval" buttonAttr="normal" type="approval" />
+      <mainButton uid="mainButton-1485142971058" id="etn-approval" buttonAttr="normal" type="etn-approval" />
+      <mainButton uid="mainButton-1485142971052" id="add" buttonAttr="normal" type="add" />
+      <mainButton uid="mainButton-1485142971053" id="search" buttonAttr="normal" type="search" />
+      <mainButton uid="mainButton-1485142971054" id="delete" buttonAttr="normal" type="delete" />
+      <mainButton uid="mainButton-1485142971055" id="print" buttonAttr="normal" type="print" />
+      <mainButton uid="mainButton-1485142971056" id="save" buttonAttr="normal" type="save" />
+      <mainButton uid="mainButton-1485142971057" id="configure" buttonAttr="normal" type="configure" />
+    </mainButtons>
+    <grid uid="grid-022f9fcb" mockupData="" id="grid1" dataSource="dataSource1" height_type="px" editable="true" movable="false" rowNo="true" selectable="false" checkable="false" pasteAddRowEvent="false" sortable="false" shiftCheck="false" autoBind="true" requiredCheck="false" stateColumn="false" noData="false" noDataMessage="데이터가 없습니다" fillWidth="true" resizable="true" contextType="Boolean" context="false" contextex="true" skipEdit="false" copyMode="cell" multiFooterCnt="0" multiHeaderSummaryCnt="0" useGridUserGroup="false">
+      <mockupText>MTAwMCxTMDEs7ZmN6ri464+ZDQoxMDAwLFMwMizsmrDrgpjsnYA=</mockupText>
+      <columns>
+        <column uid="833a3ac5-75e7-4fe0-a9b1-ea0d3e8dc9ef" field="DEPT_CD" title="부서코드" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+          <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+            <referenceFieldArray />
+          </mergeObject>
+          <headerCheck used="false" location="right" />
+          <footer predefined="false" currency_type="value" currency="" align="center">
+            <group predefined="false" />
+          </footer>
+          <footerCollection />
+          <headerSummary predefined="false" currency_type="value" currency="" align="center" />
+          <headerSummaryCollection />
+          <formats />
+          <editor />
+          <customExport check="" />
+        </column>
+        <column uid="4778713b-f948-4f53-9125-10eddd69a37d" field="field" title="사원정보" width="210" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="false" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+          <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+            <referenceFieldArray />
+          </mergeObject>
+          <headerCheck used="false" location="right" />
+          <footer predefined="false" currency_type="value" currency="" align="center">
+            <group predefined="false" />
+          </footer>
+          <footerCollection />
+          <headerSummary predefined="false" currency_type="value" currency="" align="center" />
+          <headerSummaryCollection />
+          <formats />
+          <editor />
+          <columns>
+            <column uid="41bff750-ab22-41fd-a2e6-937c7cbda9c6" field="EMP_NO_LST_DC" title="사원번호" width="120" align="left" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+              <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+                <referenceFieldArray />
+              </mergeObject>
+              <headerCheck used="false" location="right" />
+              <footer predefined="false" currency_type="value" currency="" align="center">
+                <group predefined="false" />
+              </footer>
+              <footerCollection />
+              <headerSummary predefined="false" currency_type="value" currency="" align="center" />
+              <headerSummaryCollection />
+              <formats />
+              <editor />
+              <customExport check="" />
+            </column>
+            <column uid="d209b8f4-bb14-42a2-87bc-3d86aa7dc185" field="EMP_NM" title="사원명" width="90" align="left" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+              <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+                <referenceFieldArray />
+              </mergeObject>
+              <headerCheck used="false" location="right" />
+              <footer predefined="false" currency_type="value" currency="" align="center">
+                <group predefined="false" />
+              </footer>
+              <footerCollection />
+              <headerSummary predefined="false" currency_type="value" currency="" align="center" />
+              <headerSummaryCollection />
+              <formats />
+              <editor />
+              <customExport check="" />
+            </column>
+          </columns>
+          <customExport check="" />
+        </column>
+      </columns>
+      <filter filterType="Boolean" filter="true" iconVisible="false" />
+      <contextObject excelDownload="true" fixed="true" search="true" excelDownloadExpandAll="true" excelFileNameSuffixDate="false" excelFileNameSuffixDateFormat="" />
+      <detailGrid addedRowDataSourceRead="true" />
+      <gridGroupColumns />
+      <fixed colCount="0" rightColCount="0" />
+      <styles heightTyp="string">
+        <rowNo />
+        <cellBorder />
+        <font bold="false" />
+        <padding />
+        <heightObject />
+      </styles>
+      <note>
+        <keys />
+      </note>
+    </grid>
+  </canvas>
+  <dataSources>
+    <datasource uid="datasource-ecde7880b39d46bc99dab3df48a66162" id="dataSource1" isTreeGrid="false" grid="true" aggregate="false" group="false" userGroup="false" type="localdata" module="" service="" urlpattern="" params_type="none" params="" preview_type="none" preview="" localdata="87075e2f-6ab2-41ed-8796-86eb69875f07" url="" useGroup="false" isMultiPipe="false" pipeparam="" pipecolumn="" paging="false" pagingCount="500" error="" DSType="Grid" isPost="false">
+      <mapping />
+      <columns>
+        <column field="DEPT_CD" unionfield="" dataType="string" editable="false" useType="true" isID="false" isChildren="false" description="부서코드" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="EMP_NO_LST_DC" unionfield="" dataType="string" editable="false" useType="true" isID="false" isChildren="false" description="사원번호" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="EMP_NM" unionfield="" dataType="string" editable="false" useType="true" isID="false" isChildren="false" description="사원명" useAggregate="false" aggregate="" useGroup="false" />
+      </columns>
+      <widgetSampleDatas />
+    </datasource>
+  </dataSources>
+  <pageMarkDown><![CDATA[]]></pageMarkDown>
+  <pageCssStyle><![CDATA[]]></pageCssStyle>
+  <stylesheets />
+  <javascripts />
+  <settings />
+  <datas>
+    <data id="87075e2f-6ab2-41ed-8796-86eb69875f07" type="local"><![CDATA[[]]]></data>
+  </datas>
+</page>
