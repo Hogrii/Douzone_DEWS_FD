@@ -52,8 +52,12 @@
               <footerCollection />
               <headerSummary predefined="false" currency_type="value" currency="" align="center" />
               <headerSummaryCollection />
-              <formats />
-              <editor />
+              <formats>
+                <DesignerControl />
+              </formats>
+              <editor>
+                <DesignerControl />
+              </editor>
               <customExport check="" />
             </column>
             <column uid="91d5de79-7dce-4d03-b0a3-7e0200a36cda" field="DEPT_CD" title="부서코드" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="readonly" footerType="object" headerType="object">
@@ -67,8 +71,12 @@
               <footerCollection />
               <headerSummary predefined="false" currency_type="value" currency="" align="center" />
               <headerSummaryCollection />
-              <formats />
-              <editor />
+              <formats>
+                <DesignerControl />
+              </formats>
+              <editor>
+                <DesignerControl />
+              </editor>
               <customExport check="" />
             </column>
             <column uid="ff68ada6-af72-45f7-90fc-74c6d2e32a46" field="EMP_NO" title="사원번호" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="required" footerType="object" headerType="object">
@@ -82,8 +90,12 @@
               <footerCollection />
               <headerSummary predefined="false" currency_type="value" currency="" align="center" />
               <headerSummaryCollection />
-              <formats />
-              <editor />
+              <formats>
+                <DesignerControl />
+              </formats>
+              <editor>
+                <DesignerControl />
+              </editor>
               <customExport check="" />
             </column>
             <column uid="8b42c1d1-b225-4d9e-b105-9818b8e4a85f" field="KOR_NM" title="사원명" width="90" align="left" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
@@ -97,13 +109,19 @@
               <footerCollection />
               <headerSummary predefined="false" currency_type="value" currency="" align="center" />
               <headerSummaryCollection />
-              <formats />
-              <editor />
+              <formats>
+                <DesignerControl />
+              </formats>
+              <editor>
+                <DesignerControl />
+              </editor>
               <customExport check="" />
             </column>
           </columns>
           <filter filterType="Boolean" filter="true" iconVisible="false" />
-          <contextObject excelDownload="true" fixed="true" search="true" excelDownloadExpandAll="true" excelFileNameSuffixDate="false" excelFileNameSuffixDateFormat="" />
+          <contextObject excelDownload="true" fixed="true" search="true" excelDownloadExpandAll="true" excelFileNameSuffixDate="false" excelFileNameSuffixDateFormat="">
+            <gridContextItems />
+          </contextObject>
           <detailGrid addedRowDataSourceRead="true" />
           <gridGroupColumns />
           <fixed colCount="0" rightColCount="0" />
